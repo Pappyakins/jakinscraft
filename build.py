@@ -5,6 +5,9 @@ Swap these two values and re-run to update the whole site:
 """
 WHATSAPP_NUMBER = "14165550000"   # PLACEHOLDER - Pappy's real WhatsApp number goes here (digits only, with country code)
 LOGO_PATH = "assets/logo.png"     # drop the real logo file here later; no code changes needed
+IMG_E1 = "assets/machine-e1.jpg"    # eufyMake E1 UV printer -> UV printing / tumbler card
+IMG_P1S = "assets/machine-p1s.jpg"  # Bambu Lab P1S -> Custom 3D Printing card
+IMG_F2 = "assets/machine-f2.jpg"    # xTool F2 laser engraver -> Laser Engraving card
 
 import pathlib, urllib.parse
 
@@ -81,6 +84,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.92);backdrop-filt
 .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
 .card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.5),0 0 0 1px rgba(212,175,55,.35)}
 .card .icon{font-size:2.2rem;margin-bottom:14px}
+.card .machine-photo{display:block;width:calc(100% + 56px);height:190px;object-fit:cover;margin:-28px -28px 18px;border-radius:20px 20px 0 0;border-bottom:1px solid var(--line);background:#0e0e10}
 .card h3{font-size:1.45rem;margin-bottom:10px}
 .card h3 em{color:var(--gold);font-style:normal}
 .card p{color:var(--muted);font-size:.95rem;flex:1;margin-bottom:18px}
@@ -161,7 +165,7 @@ footer .powered b{color:var(--gold)}
         <a class="btn-wa" href="%%WA_PENDANT%%">Order on WhatsApp</a>
       </div>
       <div class="card">
-        <div class="icon">🥤</div>
+        <img class="machine-photo" src="%%IMG_E1%%" alt="eufyMake E1 UV printer" loading="lazy">
         <h3>Custom 30oz <em>Tumbler</em></h3>
         <p>Your design wrapped around a 30oz insulated tumbler, UV-printed in vivid full colour. Keeps drinks hot or cold for hours — and keeps your brand in hand all day.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
@@ -175,14 +179,14 @@ footer .powered b{color:var(--gold)}
         <a class="btn-wa" href="%%WA_KEYCHAIN%%">Order on WhatsApp</a>
       </div>
       <div class="card">
-        <div class="icon">🖨️</div>
+        <img class="machine-photo" src="%%IMG_P1S%%" alt="Bambu Lab P1S 3D printer" loading="lazy">
         <h3>Custom <em>3D Printing</em></h3>
         <p>Printed on our Bambu Lab — custom parts, prototypes, decor, replacement bits, and one-off creations. Send a file or just describe the idea and we'll make it real.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
         <a class="btn-wa" href="%%WA_3DPRINT%%">Order on WhatsApp</a>
       </div>
       <div class="card">
-        <div class="icon">⚡</div>
+        <img class="machine-photo" src="%%IMG_F2%%" alt="xTool F2 laser engraver" loading="lazy">
         <h3>Laser <em>Engraving</em></h3>
         <p>Precision engraving with our xTool F2 — crisp logos and text on wood, metal, acrylic, leather, tumblers and more. Perfect for gifts, signage, and branded gear.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
@@ -292,6 +296,9 @@ document.getElementById("q-send").addEventListener("auxclick", function (e) { e.
 
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
+       .replace("%%IMG_E1%%", IMG_E1)
+       .replace("%%IMG_P1S%%", IMG_P1S)
+       .replace("%%IMG_F2%%", IMG_F2)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
