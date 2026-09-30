@@ -17,6 +17,8 @@ orders = {
     "pendant": wa("Hi JakinsCraft! I'd like to order a Custom NFC & QR Code Business Logo Pendant. (1/$20, 2/$35, 5/$75)"),
     "tumbler": wa("Hi JakinsCraft! I'd like to order a custom-printed 30oz tumbler."),
     "keychain": wa("Hi JakinsCraft! I'd like to order a custom QR keychain."),
+    "3dprint": wa("Hi JakinsCraft! I'm interested in custom 3D printing. Here's what I need:"),
+    "laser": wa("Hi JakinsCraft! I'm interested in laser engraving. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -172,6 +174,20 @@ footer .powered b{color:var(--gold)}
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
         <a class="btn-wa" href="%%WA_KEYCHAIN%%">Order on WhatsApp</a>
       </div>
+      <div class="card">
+        <div class="icon">🖨️</div>
+        <h3>Custom <em>3D Printing</em></h3>
+        <p>Printed on our Bambu Lab — custom parts, prototypes, decor, replacement bits, and one-off creations. Send a file or just describe the idea and we'll make it real.</p>
+        <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
+        <a class="btn-wa" href="%%WA_3DPRINT%%">Order on WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Laser <em>Engraving</em></h3>
+        <p>Precision engraving with our xTool F2 — crisp logos and text on wood, metal, acrylic, leather, tumblers and more. Perfect for gifts, signage, and branded gear.</p>
+        <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
+        <a class="btn-wa" href="%%WA_LASER%%">Order on WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
@@ -193,6 +209,8 @@ footer .powered b{color:var(--gold)}
             <option>NFC &amp; QR Business Pendant</option>
             <option>Custom 30oz Tumbler</option>
             <option>Custom QR Keychain</option>
+            <option>Custom 3D Printing</option>
+            <option>Laser Engraving</option>
             <option>Bulk / Corporate Order</option>
           </select>
         </div>
@@ -278,6 +296,8 @@ out = (HTML
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
        .replace("%%WA_KEYCHAIN%%", orders["keychain"])
+       .replace("%%WA_3DPRINT%%", orders["3dprint"])
+       .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
