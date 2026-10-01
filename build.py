@@ -3,7 +3,7 @@
 
 Swap these two values and re-run to update the whole site:
 """
-WHATSAPP_NUMBER = "14165550000"   # PLACEHOLDER - Pappy's real WhatsApp number goes here (digits only, with country code)
+WHATSAPP_NUMBER = "14378552210"   # Pappy's real WhatsApp number (digits only, with country code)
 LOGO_PATH = "assets/logo.png"     # drop the real logo file here later; no code changes needed
 IMG_E1 = "assets/machine-e1.jpg"    # eufyMake E1 UV printer -> UV printing / tumbler card
 IMG_P1S = "assets/machine-p1s.jpg"  # Bambu Lab P1S -> Custom 3D Printing card
