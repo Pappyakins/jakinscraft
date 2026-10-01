@@ -26,6 +26,7 @@ IMG_KEY_INSTA = "assets/gallery/keychains-instagram.jpg"  # Instagram QR keychai
 IMG_PENS_TREM = "assets/gallery/pens-trem-engraved.jpg"  # Laser-engraved TREM bamboo pens
 IMG_TUMBLER_SUMMER = "assets/gallery/tumbler-summer-vibes.jpg"  # Summer Vibes tumbler
 IMG_E1_PRINTING = "assets/gallery/e1-printing-tumbler.jpg"  # Tumbler UV printing on the E1
+IMG_GAL_PENDANT = "assets/fb/nfc-pendant.jpg"  # NFC pendant listing photo -> gallery tile
 
 import pathlib, urllib.parse
 
@@ -275,7 +276,7 @@ footer .powered b{color:var(--gold)}
     <p class="sub">Real work, fresh from the printer.</p>
     <div class="gold-rule" style="margin:0 0 28px"></div>
     <div class="gal">
-      <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
+      <div class="tile tile-photo"><img src="%%IMG_GAL_PENDANT%%" alt="Custom NFC & QR code business logo pendant" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_TUMBLER_FAITH%%" alt="Custom printed tumbler — A Man of Faith" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_HOODIE_AHEAD%%" alt="Custom printed hoodie — Ahead Art Gallery" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_CANVAS_CHILD%%" alt="Custom canvas portrait print — child in traditional attire" loading="lazy"></div>
@@ -348,6 +349,7 @@ out = (HTML
        .replace("%%IMG_PENS_TREM%%", IMG_PENS_TREM)
        .replace("%%IMG_TUMBLER_SUMMER%%", IMG_TUMBLER_SUMMER)
        .replace("%%IMG_E1_PRINTING%%", IMG_E1_PRINTING)
+       .replace("%%IMG_GAL_PENDANT%%", IMG_GAL_PENDANT)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
