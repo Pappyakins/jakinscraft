@@ -18,7 +18,7 @@ def wa(text: str) -> str:
 
 orders = {
     "pendant": wa("Hi JakinsCraft! I'd like to order a Custom NFC & QR Code Business Logo Pendant. (1/$20, 2/$35, 5/$75)"),
-    "tumbler": wa("Hi JakinsCraft! I'd like to order a custom-printed 30oz tumbler."),
+    "tumbler": wa("Hi JakinsCraft! I'd like to order custom UV printing."),
     "keychain": wa("Hi JakinsCraft! I'd like to order a custom QR keychain."),
     "3dprint": wa("Hi JakinsCraft! I'm interested in custom 3D printing. Here's what I need:"),
     "laser": wa("Hi JakinsCraft! I'm interested in laser engraving. Here's what I need:"),
@@ -166,8 +166,8 @@ footer .powered b{color:var(--gold)}
       </div>
       <div class="card">
         <img class="machine-photo" src="%%IMG_E1%%" alt="eufyMake E1 UV printer" loading="lazy">
-        <h3>Custom 30oz <em>Tumbler</em></h3>
-        <p>Your design wrapped around a 30oz insulated tumbler, UV-printed in vivid full colour. Keeps drinks hot or cold for hours — and keeps your brand in hand all day.</p>
+        <h3>Custom <em>UV Printing</em></h3>
+        <p>Your design UV-printed in vivid full colour — 30oz tumblers, blanks, signage and more. Crisp, durable prints that keep your brand in hand all day.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
         <a class="btn-wa" href="%%WA_TUMBLER%%">Order on WhatsApp</a>
       </div>
@@ -211,7 +211,7 @@ footer .powered b{color:var(--gold)}
           <label for="q-product">Product</label>
           <select id="q-product">
             <option>NFC &amp; QR Business Pendant</option>
-            <option>Custom 30oz Tumbler</option>
+            <option>Custom UV Printing</option>
             <option>Custom QR Keychain</option>
             <option>Custom 3D Printing</option>
             <option>Laser Engraving</option>
