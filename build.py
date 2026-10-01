@@ -11,6 +11,7 @@ IMG_F2 = "assets/machine-f2.jpg"    # xTool F2 laser engraver -> Laser Engraving
 IMG_PENDANT = "assets/fb/nfc-pendant.jpg"    # Facebook listing photo -> NFC pendant card
 IMG_KEYCHAIN = "assets/fb/nfc-keychain.jpg"  # Facebook listing photo -> QR keychain card
 IMG_TUMBLER_FAITH = "assets/gallery/tumbler-man-of-faith.jpg"  # Custom "Man of Faith" tumbler -> gallery tile
+IMG_HOODIE_AHEAD = "assets/gallery/hoodie-ahead-art.jpg"  # Custom "Ahead" hoodie -> gallery tile
 
 import pathlib, urllib.parse
 
@@ -262,7 +263,7 @@ footer .powered b{color:var(--gold)}
     <div class="gal">
       <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
       <div class="tile tile-photo"><img src="%%IMG_TUMBLER_FAITH%%" alt="Custom printed tumbler — A Man of Faith" loading="lazy"></div>
-      <div class="tile"><span class="t-icon">🔑</span><b>Keychain</b><span>Your design here</span></div>
+      <div class="tile tile-photo"><img src="%%IMG_HOODIE_AHEAD%%" alt="Custom printed hoodie — Ahead Art Gallery" loading="lazy"></div>
       <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
       <div class="tile"><span class="t-icon">🥤</span><b>Tumbler</b><span>Your design here</span></div>
       <div class="tile"><span class="t-icon">🔑</span><b>Keychain</b><span>Your design here</span></div>
@@ -307,6 +308,7 @@ out = (HTML
        .replace("%%IMG_PENDANT%%", IMG_PENDANT)
        .replace("%%IMG_KEYCHAIN%%", IMG_KEYCHAIN)
        .replace("%%IMG_TUMBLER_FAITH%%", IMG_TUMBLER_FAITH)
+       .replace("%%IMG_HOODIE_AHEAD%%", IMG_HOODIE_AHEAD)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
