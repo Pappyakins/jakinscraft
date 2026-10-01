@@ -10,6 +10,7 @@ IMG_P1S = "assets/machine-p1s.jpg"  # Bambu Lab P1S -> Custom 3D Printing card
 IMG_F2 = "assets/machine-f2.jpg"    # xTool F2 laser engraver -> Laser Engraving card
 IMG_PENDANT = "assets/fb/nfc-pendant.jpg"    # Facebook listing photo -> NFC pendant card
 IMG_KEYCHAIN = "assets/fb/nfc-keychain.jpg"  # Facebook listing photo -> QR keychain card
+IMG_TUMBLER_FAITH = "assets/gallery/tumbler-man-of-faith.jpg"  # Custom "Man of Faith" tumbler -> gallery tile
 
 import pathlib, urllib.parse
 
@@ -115,6 +116,8 @@ nav{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.92);backdrop-filt
 .tile{aspect-ratio:1/1;border-radius:18px;border:1px dashed rgba(212,175,55,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:.85rem;text-align:center;padding:16px;background:rgba(255,255,255,.015)}
 .tile .t-icon{font-size:1.8rem;opacity:.7}
 .tile b{color:var(--gold-soft);font-weight:600}
+.tile.tile-photo{padding:0;overflow:hidden;border-style:solid}
+.tile.tile-photo img{width:100%;height:100%;object-fit:cover;display:block}
 /* footer */
 footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem}
 footer .fbrand{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:6px}
@@ -254,11 +257,11 @@ footer .powered b{color:var(--gold)}
   <div class="wrap">
     <div class="eyebrow">Gallery</div>
     <h2 class="sec">Fresh from the printer</h2>
-    <p class="sub">Real customer pieces landing here soon.</p>
+    <p class="sub">Real work, fresh from the printer.</p>
     <div class="gold-rule" style="margin:0 0 28px"></div>
     <div class="gal">
       <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
-      <div class="tile"><span class="t-icon">🥤</span><b>Tumbler</b><span>Your design here</span></div>
+      <div class="tile tile-photo"><img src="%%IMG_TUMBLER_FAITH%%" alt="Custom printed tumbler — A Man of Faith" loading="lazy"></div>
       <div class="tile"><span class="t-icon">🔑</span><b>Keychain</b><span>Your design here</span></div>
       <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
       <div class="tile"><span class="t-icon">🥤</span><b>Tumbler</b><span>Your design here</span></div>
@@ -303,6 +306,7 @@ out = (HTML
        .replace("%%IMG_F2%%", IMG_F2)
        .replace("%%IMG_PENDANT%%", IMG_PENDANT)
        .replace("%%IMG_KEYCHAIN%%", IMG_KEYCHAIN)
+       .replace("%%IMG_TUMBLER_FAITH%%", IMG_TUMBLER_FAITH)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
