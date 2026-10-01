@@ -12,6 +12,20 @@ IMG_PENDANT = "assets/fb/nfc-pendant.jpg"    # Facebook listing photo -> NFC pen
 IMG_KEYCHAIN = "assets/fb/nfc-keychain.jpg"  # Facebook listing photo -> QR keychain card
 IMG_TUMBLER_FAITH = "assets/gallery/tumbler-man-of-faith.jpg"  # Custom "Man of Faith" tumbler -> gallery tile
 IMG_HOODIE_AHEAD = "assets/gallery/hoodie-ahead-art.jpg"  # Custom "Ahead" hoodie -> gallery tile
+IMG_CANVAS_CHILD = "assets/gallery/canvas-portrait-child.jpg"  # Canvas portrait, child in red traditional attire
+IMG_CANVAS_GELE = "assets/gallery/canvas-portrait-gele.jpg"  # Canvas portrait, gele headwrap
+IMG_CANVAS_PIZZA = "assets/gallery/canvas-portrait-pizza.jpg"  # Canvas portrait
+IMG_CANVAS_BRAIDS = "assets/gallery/canvas-portrait-braids.jpg"  # Canvas portrait, braided hair
+IMG_CANVAS_BOY = "assets/gallery/canvas-portrait-boy-beads.jpg"  # Canvas portrait, boy with coral beads
+IMG_CANVAS_PAIR = "assets/gallery/canvas-portraits-pair.jpg"  # Two canvas portraits
+IMG_HOODIE_BUNNY = "assets/gallery/hoodie-hiphop-bunny.jpg"  # Hip Hop bunny hoodie
+IMG_TEE_MOMLIFE = "assets/gallery/tee-mom-life.jpg"  # Mom Life t-shirt
+IMG_TEE_MONKEY = "assets/gallery/tee-monkey-dj.jpg"  # DJ monkey t-shirt
+IMG_KEY_BOTB = "assets/gallery/keychain-botb-arena.jpg"  # BOTB Arena keychain
+IMG_KEY_INSTA = "assets/gallery/keychains-instagram.jpg"  # Instagram QR keychains
+IMG_PENS_TREM = "assets/gallery/pens-trem-engraved.jpg"  # Laser-engraved TREM bamboo pens
+IMG_TUMBLER_SUMMER = "assets/gallery/tumbler-summer-vibes.jpg"  # Summer Vibes tumbler
+IMG_E1_PRINTING = "assets/gallery/e1-printing-tumbler.jpg"  # Tumbler UV printing on the E1
 
 import pathlib, urllib.parse
 
@@ -264,9 +278,20 @@ footer .powered b{color:var(--gold)}
       <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
       <div class="tile tile-photo"><img src="%%IMG_TUMBLER_FAITH%%" alt="Custom printed tumbler — A Man of Faith" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_HOODIE_AHEAD%%" alt="Custom printed hoodie — Ahead Art Gallery" loading="lazy"></div>
-      <div class="tile"><span class="t-icon">📿</span><b>Pendant</b><span>Your design here</span></div>
-      <div class="tile"><span class="t-icon">🥤</span><b>Tumbler</b><span>Your design here</span></div>
-      <div class="tile"><span class="t-icon">🔑</span><b>Keychain</b><span>Your design here</span></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_CHILD%%" alt="Custom canvas portrait print — child in traditional attire" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_GELE%%" alt="Custom canvas portrait print — gele headwrap" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_PIZZA%%" alt="Custom canvas portrait print" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_BRAIDS%%" alt="Custom canvas portrait print — braided hair" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_BOY%%" alt="Custom canvas portrait print — coral beads" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_PAIR%%" alt="Custom canvas portrait prints" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_HOODIE_BUNNY%%" alt="Custom printed hoodie — Hip Hop bunny" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TEE_MOMLIFE%%" alt="Custom printed t-shirt — Mom Life" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TEE_MONKEY%%" alt="Custom printed t-shirt — DJ monkey" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_KEY_BOTB%%" alt="Custom printed keychain — BOTB Arena" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_KEY_INSTA%%" alt="Custom Instagram QR keychains" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_PENS_TREM%%" alt="Laser-engraved bamboo pens — TREM" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TUMBLER_SUMMER%%" alt="Custom UV-printed tumbler — Summer Vibes" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_E1_PRINTING%%" alt="Tumbler being UV printed on the eufyMake E1" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -309,6 +334,20 @@ out = (HTML
        .replace("%%IMG_KEYCHAIN%%", IMG_KEYCHAIN)
        .replace("%%IMG_TUMBLER_FAITH%%", IMG_TUMBLER_FAITH)
        .replace("%%IMG_HOODIE_AHEAD%%", IMG_HOODIE_AHEAD)
+       .replace("%%IMG_CANVAS_CHILD%%", IMG_CANVAS_CHILD)
+       .replace("%%IMG_CANVAS_GELE%%", IMG_CANVAS_GELE)
+       .replace("%%IMG_CANVAS_PIZZA%%", IMG_CANVAS_PIZZA)
+       .replace("%%IMG_CANVAS_BRAIDS%%", IMG_CANVAS_BRAIDS)
+       .replace("%%IMG_CANVAS_BOY%%", IMG_CANVAS_BOY)
+       .replace("%%IMG_CANVAS_PAIR%%", IMG_CANVAS_PAIR)
+       .replace("%%IMG_HOODIE_BUNNY%%", IMG_HOODIE_BUNNY)
+       .replace("%%IMG_TEE_MOMLIFE%%", IMG_TEE_MOMLIFE)
+       .replace("%%IMG_TEE_MONKEY%%", IMG_TEE_MONKEY)
+       .replace("%%IMG_KEY_BOTB%%", IMG_KEY_BOTB)
+       .replace("%%IMG_KEY_INSTA%%", IMG_KEY_INSTA)
+       .replace("%%IMG_PENS_TREM%%", IMG_PENS_TREM)
+       .replace("%%IMG_TUMBLER_SUMMER%%", IMG_TUMBLER_SUMMER)
+       .replace("%%IMG_E1_PRINTING%%", IMG_E1_PRINTING)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
