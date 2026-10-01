@@ -8,6 +8,8 @@ LOGO_PATH = "assets/logo.png"     # drop the real logo file here later; no code 
 IMG_E1 = "assets/machine-e1.jpg"    # eufyMake E1 UV printer -> UV printing / tumbler card
 IMG_P1S = "assets/machine-p1s.jpg"  # Bambu Lab P1S -> Custom 3D Printing card
 IMG_F2 = "assets/machine-f2.jpg"    # xTool F2 laser engraver -> Laser Engraving card
+IMG_PENDANT = "assets/fb/nfc-pendant.jpg"    # Facebook listing photo -> NFC pendant card
+IMG_KEYCHAIN = "assets/fb/nfc-keychain.jpg"  # Facebook listing photo -> QR keychain card
 
 import pathlib, urllib.parse
 
@@ -158,7 +160,7 @@ footer .powered b{color:var(--gold)}
     <div class="gold-rule" style="margin:0 0 28px"></div>
     <div class="cards">
       <div class="card">
-        <div class="icon">📿</div>
+        <img class="machine-photo" src="%%IMG_PENDANT%%" alt="Custom NFC business logo pendant" loading="lazy">
         <h3>NFC &amp; QR <em>Business Pendant</em></h3>
         <p>Your business logo on a sleek pendant with a built-in NFC chip and QR code. One tap or scan shares your digital business card — name, number, links, everything.</p>
         <div class="price">1 / $20 &nbsp;·&nbsp; 2 / $35 &nbsp;·&nbsp; 5 / $75<small>Bulk pricing on request</small></div>
@@ -172,7 +174,7 @@ footer .powered b{color:var(--gold)}
         <a class="btn-wa" href="%%WA_TUMBLER%%">Order on WhatsApp</a>
       </div>
       <div class="card">
-        <div class="icon">🔑</div>
+        <img class="machine-photo" src="%%IMG_KEYCHAIN%%" alt="Custom NFC QR keychains" loading="lazy">
         <h3>Custom QR <em>Keychain</em></h3>
         <p>Your logo, your link, your QR — on a durable keychain people actually scan. Perfect for menus, Wi-Fi codes, socials, or your business page.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
@@ -299,6 +301,8 @@ out = (HTML
        .replace("%%IMG_E1%%", IMG_E1)
        .replace("%%IMG_P1S%%", IMG_P1S)
        .replace("%%IMG_F2%%", IMG_F2)
+       .replace("%%IMG_PENDANT%%", IMG_PENDANT)
+       .replace("%%IMG_KEYCHAIN%%", IMG_KEYCHAIN)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
