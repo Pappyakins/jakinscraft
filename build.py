@@ -27,6 +27,8 @@ IMG_PENS_TREM = "assets/gallery/pens-trem-engraved.jpg"  # Laser-engraved TREM b
 IMG_TUMBLER_SUMMER = "assets/gallery/tumbler-summer-vibes.jpg"  # Summer Vibes tumbler
 IMG_E1_PRINTING = "assets/gallery/e1-printing-tumbler.jpg"  # Tumbler UV printing on the E1
 IMG_GAL_PENDANT = "assets/fb/nfc-pendant.jpg"  # NFC pendant listing photo -> gallery tile
+IMG_CANVAS_HAT = "assets/gallery/canvas-portrait-hat.jpg"  # New: framed canvas portrait, man in wide-brim hat -> gallery tile
+IMG_CANVAS_GLASSES = "assets/gallery/canvas-portrait-glasses.jpg"  # New: unframed canvas portrait, man with glasses -> gallery tile
 
 import pathlib, urllib.parse
 
@@ -276,6 +278,8 @@ footer .powered b{color:var(--accent)}
     <p class="sub">Real work, fresh from the printer.</p>
     <div class="accent-rule" style="margin:0 0 28px"></div>
     <div class="gal">
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_HAT%%" alt="Custom canvas portrait print — man in a wide-brim hat and glasses, framed" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_CANVAS_GLASSES%%" alt="Custom canvas portrait print — man with glasses and beard on canvas" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_GAL_PENDANT%%" alt="Custom NFC & QR code business logo pendant" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_TUMBLER_FAITH%%" alt="Custom printed tumbler — A Man of Faith" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_HOODIE_AHEAD%%" alt="Custom printed hoodie — Ahead Art Gallery" loading="lazy"></div>
@@ -350,6 +354,8 @@ out = (HTML
        .replace("%%IMG_TUMBLER_SUMMER%%", IMG_TUMBLER_SUMMER)
        .replace("%%IMG_E1_PRINTING%%", IMG_E1_PRINTING)
        .replace("%%IMG_GAL_PENDANT%%", IMG_GAL_PENDANT)
+       .replace("%%IMG_CANVAS_HAT%%", IMG_CANVAS_HAT)
+       .replace("%%IMG_CANVAS_GLASSES%%", IMG_CANVAS_GLASSES)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
