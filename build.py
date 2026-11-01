@@ -29,6 +29,9 @@ IMG_E1_PRINTING = "assets/gallery/e1-printing-tumbler.jpg"  # Tumbler UV printin
 IMG_GAL_PENDANT = "assets/fb/nfc-pendant.jpg"  # NFC pendant listing photo -> gallery tile
 IMG_CANVAS_HAT = "assets/gallery/canvas-portrait-hat.jpg"  # New: framed canvas portrait, man in wide-brim hat -> gallery tile
 IMG_CANVAS_GLASSES = "assets/gallery/canvas-portrait-glasses.jpg"  # New: unframed canvas portrait, man with glasses -> gallery tile
+IMG_TREM_PAIR = "assets/gallery/canvas-portrait-trem-pair.jpg"  # New: framed TREM Children Church painted portraits, pair on display -> gallery tile
+IMG_TREM_SUIT = "assets/gallery/canvas-portrait-trem-suit.jpg"  # New: framed TREM Children Church painted portrait, suit and striped tie -> gallery tile
+IMG_TREM_FLORAL = "assets/gallery/canvas-portrait-trem-floral.jpg"  # New: framed TREM Children Church painted portrait, floral top -> gallery tile
 
 import pathlib, urllib.parse
 
@@ -278,6 +281,9 @@ footer .powered b{color:var(--accent)}
     <p class="sub">Real work, fresh from the printer.</p>
     <div class="accent-rule" style="margin:0 0 28px"></div>
     <div class="gal">
+      <div class="tile tile-photo"><img src="%%IMG_TREM_PAIR%%" alt="Framed painted portrait prints — pair on display, TREM Children Church" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TREM_SUIT%%" alt="Framed painted portrait print — suit and striped tie, TREM Children Church" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TREM_FLORAL%%" alt="Framed painted portrait print — floral top, TREM Children Church" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_CANVAS_HAT%%" alt="Custom canvas portrait print — man in a wide-brim hat and glasses, framed" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_CANVAS_GLASSES%%" alt="Custom canvas portrait print — man with glasses and beard on canvas" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_GAL_PENDANT%%" alt="Custom NFC & QR code business logo pendant" loading="lazy"></div>
@@ -356,6 +362,9 @@ out = (HTML
        .replace("%%IMG_GAL_PENDANT%%", IMG_GAL_PENDANT)
        .replace("%%IMG_CANVAS_HAT%%", IMG_CANVAS_HAT)
        .replace("%%IMG_CANVAS_GLASSES%%", IMG_CANVAS_GLASSES)
+       .replace("%%IMG_TREM_PAIR%%", IMG_TREM_PAIR)
+       .replace("%%IMG_TREM_SUIT%%", IMG_TREM_SUIT)
+       .replace("%%IMG_TREM_FLORAL%%", IMG_TREM_FLORAL)
        .replace("%%WHATSAPP_NUMBER%%", WHATSAPP_NUMBER)
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
