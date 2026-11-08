@@ -10,6 +10,7 @@ IMG_P1S = "assets/machine-p1s.jpg"  # Bambu Lab P1S -> Custom 3D Printing card
 IMG_F2 = "assets/machine-f2.jpg"    # xTool F2 laser engraver -> Laser Engraving card
 IMG_PENDANT = "assets/fb/nfc-pendant.jpg"    # Facebook listing photo -> NFC pendant card
 IMG_KEYCHAIN = "assets/fb/nfc-keychain.jpg"  # Facebook listing photo -> QR keychain card
+IMG_PLATE_CARD = "assets/fb/nfc-plate-card.jpg"  # Facebook listing photo -> Ontario plate NFC card
 IMG_TUMBLER_FAITH = "assets/gallery/tumbler-man-of-faith.jpg"  # Custom "Man of Faith" tumbler -> gallery tile
 IMG_HOODIE_AHEAD = "assets/gallery/hoodie-ahead-art.jpg"  # Custom "Ahead" hoodie -> gallery tile
 IMG_CANVAS_CHILD = "assets/gallery/canvas-portrait-child.jpg"  # Canvas portrait, child in red traditional attire
@@ -42,6 +43,7 @@ def wa(text: str) -> str:
 
 orders = {
     "pendant": wa("Hi JakinsCraft! I'd like to order a Custom NFC & QR Code Business Logo Pendant. (1/$20, 2/$35, 5/$75)"),
+    "plate_card": wa("Hi JakinsCraft! I'd like to order an Ontario Licence Plate NFC Card. ($20)"),
     "tumbler": wa("Hi JakinsCraft! I'd like to order custom UV printing."),
     "keychain": wa("Hi JakinsCraft! I'd like to order a custom QR keychain."),
     "3dprint": wa("Hi JakinsCraft! I'm interested in custom 3D printing. Here's what I need:"),
@@ -191,6 +193,13 @@ footer .powered b{color:var(--accent)}
         <a class="btn-wa" href="%%WA_PENDANT%%">Order on WhatsApp</a>
       </div>
       <div class="card">
+        <img class="machine-photo" src="%%IMG_PLATE_CARD%%" alt="Ontario licence plate NFC card" loading="lazy">
+        <h3>Ontario Plate <em>NFC Card</em></h3>
+        <p>Your insurance slip, one tap away. A custom Ontario plate card with an NFC tag sealed inside, tap it with any phone and your proof of insurance opens instantly, no app, no login.</p>
+        <div class="price">$20<small>Custom plate, programmed tag included</small></div>
+        <a class="btn-wa" href="%%WA_PLATE_CARD%%">Order on WhatsApp</a>
+      </div>
+      <div class="card">
         <img class="machine-photo" src="%%IMG_E1%%" alt="eufyMake E1 UV printer" loading="lazy">
         <h3>Custom <em>UV Printing</em></h3>
         <p>Your design UV-printed in vivid full colour — 30oz tumblers, blanks, signage and more. Crisp, durable prints that keep your brand in hand all day.</p>
@@ -237,6 +246,7 @@ footer .powered b{color:var(--accent)}
           <label for="q-product">Product</label>
           <select id="q-product">
             <option>NFC &amp; QR Business Pendant</option>
+            <option>Ontario Plate NFC Card</option>
             <option>Custom UV Printing</option>
             <option>Custom QR Keychain</option>
             <option>Custom 3D Printing</option>
@@ -343,6 +353,7 @@ out = (HTML
        .replace("%%IMG_F2%%", IMG_F2)
        .replace("%%IMG_PENDANT%%", IMG_PENDANT)
        .replace("%%IMG_KEYCHAIN%%", IMG_KEYCHAIN)
+       .replace("%%IMG_PLATE_CARD%%", IMG_PLATE_CARD)
        .replace("%%IMG_TUMBLER_FAITH%%", IMG_TUMBLER_FAITH)
        .replace("%%IMG_HOODIE_AHEAD%%", IMG_HOODIE_AHEAD)
        .replace("%%IMG_CANVAS_CHILD%%", IMG_CANVAS_CHILD)
@@ -369,6 +380,7 @@ out = (HTML
        .replace("%%WA_PENDANT%%", orders["pendant"])
        .replace("%%WA_TUMBLER%%", orders["tumbler"])
        .replace("%%WA_KEYCHAIN%%", orders["keychain"])
+       .replace("%%WA_PLATE_CARD%%", orders["plate_card"])
        .replace("%%WA_3DPRINT%%", orders["3dprint"])
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_BULK%%", orders["bulk"]))
