@@ -152,6 +152,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.92);backdrop-filt
 .work-cap{padding:12px 14px 14px}
 .work-cap b{display:block;font-size:.95rem;font-weight:600;margin-bottom:2px}
 .work-cap span{color:var(--accent-soft);font-size:.8rem}
+.work-price{color:var(--accent-soft);font-weight:700;font-size:1rem;margin-top:6px}
 /* footer */
 footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem}
 footer .fbrand{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:6px}
@@ -363,54 +364,59 @@ document.getElementById("q-send").addEventListener("auxclick", function (e) { e.
 
 # --- Laser Work section (xTool X1 + F2 samples) ---
 # Photos are xTool's own samples of what each machine does, kept in
-# assets/samples/. Each tile is (image, title, laser tag), or
-# (image, title, laser tag, wide) for the two full F2 panels.
+# assets/samples/. Each tile is (image, title, laser tag, price), or
+# (image, title, laser tag, price, wide) for the two full F2 panels.
+# Prices are CAD starting prices from a Nov 26, 2026 market survey
+# (Toronto shops, Etsy Canada, US laser shops): set at or above the
+# Toronto market midpoint, blanks run a few dollars, so margins are
+# strong. Final quote depends on size and design.
 X1_NOW = [
-    ("assets/samples/x1-wood-dollhouse.jpg", "Wooden dollhouse", "55W CO2 · Powerful cutting"),
-    ("assets/samples/x1-wood-mountain.jpg", "Layered mountain wood art", "55W CO2 · Powerful cutting"),
-    ("assets/samples/x1-acrylic-motorcycle.jpg", "Clear acrylic motorcycle model", "55W CO2 · Clear acrylic cutting"),
-    ("assets/samples/x1-acrylic-wedding.jpg", "Olivia and James wedding sign", "55W CO2 · Cutting and engraving"),
-    ("assets/samples/x1-glass-award.jpg", "The Legacy Award glass plaque", "55W CO2 · Surface engraving"),
-    ("assets/samples/x1-mm-leather.jpg", "Leather cap patch", "CO2 / Diode"),
-    ("assets/samples/x1-mm-stone.jpg", "Slate coasters", "Diode"),
-    ("assets/samples/x1-mm-silicone.jpg", "Silicone phone cases", "Diode"),
-    ("assets/samples/x1-mm-denim.jpg", "Denim jeans", "CO2 / Diode"),
-    ("assets/samples/x1-mm-paper.jpg", "Paper anniversary card", "CO2 / Diode"),
-    ("assets/samples/x1-mm-rubber.jpg", "Rubber stamps", "Diode"),
-    ("assets/samples/x1-door-sign.jpg", "Wooden door sign", "xTool X1"),
-    ("assets/samples/x1-tumbler.jpg", "Personalized tumbler", "xTool X1"),
-    ("assets/samples/x1-glass-ornament.jpg", "Glass ornament", "xTool X1"),
+    ("assets/samples/x1-wood-dollhouse.jpg", "Wooden dollhouse", "55W CO2 · Powerful cutting", "From $85"),
+    ("assets/samples/x1-wood-mountain.jpg", "Layered mountain wood art", "55W CO2 · Powerful cutting", "From $65"),
+    ("assets/samples/x1-acrylic-motorcycle.jpg", "Clear acrylic motorcycle model", "55W CO2 · Clear acrylic cutting", "From $55"),
+    ("assets/samples/x1-acrylic-wedding.jpg", "Olivia and James wedding sign", "55W CO2 · Cutting and engraving", "From $65"),
+    ("assets/samples/x1-glass-award.jpg", "The Legacy Award glass plaque", "55W CO2 · Surface engraving", "From $55"),
+    ("assets/samples/x1-mm-leather.jpg", "Leather cap patch", "CO2 / Diode", "From $12"),
+    ("assets/samples/x1-mm-stone.jpg", "Slate coasters", "Diode", "From $12 each"),
+    ("assets/samples/x1-mm-silicone.jpg", "Silicone phone cases", "Diode", "From $25"),
+    ("assets/samples/x1-mm-denim.jpg", "Denim jeans", "CO2 / Diode", "From $30"),
+    ("assets/samples/x1-mm-paper.jpg", "Paper anniversary card", "CO2 / Diode", "From $15"),
+    ("assets/samples/x1-mm-rubber.jpg", "Rubber stamps", "Diode", "From $20"),
+    ("assets/samples/x1-door-sign.jpg", "Wooden door sign", "xTool X1", "From $45"),
+    ("assets/samples/x1-tumbler.jpg", "Personalized tumbler", "xTool X1", "From $35"),
+    ("assets/samples/x1-glass-ornament.jpg", "Glass ornament", "xTool X1", "From $20"),
 ]
 X1_ADDON = [
-    ("assets/samples/x1-wood-cat.jpg", "Framed cat portrait", "5W UV · High-detail engraving"),
-    ("assets/samples/x1-wood-relief.jpg", "Wood relief carving", "5W UV · Char-free relief"),
-    ("assets/samples/x1-acrylic-anderson.jpg", "Green acrylic Anderson card", "5W UV · Fine engraving"),
-    ("assets/samples/x1-acrylic-earrings.jpg", "Acrylic earrings", "55W CO2 + 5W UV"),
-    ("assets/samples/x1-glass-wine.jpg", "Wine glass, rotary engraving", "5W UV · Fine rotary engraving"),
-    ("assets/samples/x1-glass-tajmahal.jpg", "Taj Mahal crystal block", "5W UV · Inner engraving"),
-    ("assets/samples/x1-glass-cameo.jpg", "Glass cameo pendant", "5W UV · Relief and cutting"),
-    ("assets/samples/x1-metal-sf-plaque.jpg", "San Francisco gold plaque", "60W MOPA · Metal embossing"),
-    ("assets/samples/x1-metal-zebra.jpg", "Colour zebra art", "60W MOPA · Metal colour engraving"),
-    ("assets/samples/x1-metal-tags.jpg", "Alpencore metal tags", "30W Fiber · Batch metal marking"),
-    ("assets/samples/x1-metal-mountain.jpg", "Oval metal mountain", "60W MOPA · Thin metal cutting"),
-    ("assets/samples/x1-mm-ceramic.jpg", "Ceramic Starry Night plate", "UV / Fiber / MOPA"),
-    ("assets/samples/x1-mm-plastic.jpg", "Plastic AirPods case", "UV / MOPA"),
-    ("assets/samples/x1-mm-pearl.jpg", "Mother-of-pearl pendant", "5W UV"),
-    ("assets/samples/x1-mm-pcb.jpg", "PCB circuit board", "UV / MOPA / Fiber"),
+    ("assets/samples/x1-wood-cat.jpg", "Framed cat portrait", "5W UV · High-detail engraving", "From $75"),
+    ("assets/samples/x1-wood-relief.jpg", "Wood relief carving", "5W UV · Char-free relief", "From $95"),
+    ("assets/samples/x1-acrylic-anderson.jpg", "Green acrylic Anderson card", "5W UV · Fine engraving", "From $25"),
+    ("assets/samples/x1-acrylic-earrings.jpg", "Acrylic earrings", "55W CO2 + 5W UV", "From $25"),
+    ("assets/samples/x1-glass-wine.jpg", "Wine glass, rotary engraving", "5W UV · Fine rotary engraving", "From $30"),
+    ("assets/samples/x1-glass-tajmahal.jpg", "Taj Mahal crystal block", "5W UV · Inner engraving", "From $85"),
+    ("assets/samples/x1-glass-cameo.jpg", "Glass cameo pendant", "5W UV · Relief and cutting", "From $30"),
+    ("assets/samples/x1-metal-sf-plaque.jpg", "San Francisco gold plaque", "60W MOPA · Metal embossing", "From $95"),
+    ("assets/samples/x1-metal-zebra.jpg", "Colour zebra art", "60W MOPA · Metal colour engraving", "From $85"),
+    ("assets/samples/x1-metal-tags.jpg", "Alpencore metal tags", "30W Fiber · Batch metal marking", "From $10 each"),
+    ("assets/samples/x1-metal-mountain.jpg", "Oval metal mountain", "60W MOPA · Thin metal cutting", "From $65"),
+    ("assets/samples/x1-mm-ceramic.jpg", "Ceramic Starry Night plate", "UV / Fiber / MOPA", "From $45"),
+    ("assets/samples/x1-mm-plastic.jpg", "Plastic AirPods case", "UV / MOPA", "From $25"),
+    ("assets/samples/x1-mm-pearl.jpg", "Mother-of-pearl pendant", "5W UV", "From $45"),
+    ("assets/samples/x1-mm-pcb.jpg", "PCB circuit board", "UV / MOPA / Fiber", "From $40"),
 ]
 F2_WORK = [
-    ("assets/samples/f2-ir.jpg", "5W infrared: colour metal tags, tumblers, rings, knives, pendants", "5W IR · Metals and plastics", True),
-    ("assets/samples/f2-diode.jpg", "15W diode: slate, denim, wood, glass, leather, paper, acrylic", "15W Diode · Everyday materials", True),
+    ("assets/samples/f2-ir.jpg", "5W infrared: colour metal tags, tumblers, rings, knives, pendants", "5W IR · Metals and plastics", "From $10", True),
+    ("assets/samples/f2-diode.jpg", "15W diode: slate, denim, wood, glass, leather, paper, acrylic", "15W Diode · Everyday materials", "From $12", True),
 ]
-
 
 def _work_tiles(items):
     parts = []
     for it in items:
-        wide = " wide" if len(it) > 3 and it[3] else ""
+        img, title, tag, price = it[0], it[1], it[2], it[3]
+        wide = " wide" if len(it) > 4 and it[4] else ""
         parts.append(
-            '<div class="work-tile' + wide + '"><img src="' + it[0] + '" alt="' + it[1] + '" loading="lazy">'
-            '<div class="work-cap"><b>' + it[1] + '</b><span>' + it[2] + '</span></div></div>'
+            '<div class="work-tile' + wide + '"><img src="' + img + '" alt="' + title + '" loading="lazy">'
+            '<div class="work-cap"><b>' + title + '</b><span>' + tag + '</span>'
+            '<div class="work-price">' + price + '</div></div></div>'
         )
     return "\n      ".join(parts)
 
@@ -419,11 +425,26 @@ LASER_WORK = """
   <div class="wrap">
     <div class="eyebrow">Laser Work</div>
     <h2 class="sec">What the X1 and F2 can make</h2>
-    <p class="sub">Our new xTool X1 (55W CO2 + 20W diode galvo) joins the xTool F2 (5W infrared + 15W diode). Between them they cut and engrave wood, metal, glass, acrylic, leather, slate, denim, paper and more. The photos below are xTool's own samples of what each machine does, real JakinsCraft pieces coming soon as we make them.</p>
+    <p class="sub">Our new xTool X1 (55W CO2 + 20W diode galvo) joins the xTool F2 (5W infrared + 15W diode). Between them they cut and engrave wood, metal, glass, acrylic, leather, slate, denim, paper and more. The photos below are xTool's own samples of what each machine does, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Available now on our X1</h3>
     <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers.</p>
     <div class="work-grid">
       """ + _work_tiles(X1_NOW) + """
+    </div>
+    <h3 class="work-group">With add-on lasers (UV, MOPA, Fiber)</h3>
+    <p class="work-note">These need the X1's add-on laser modules, ask us about them as we expand.</p>
+    <div class="work-grid">
+      """ + _work_tiles(X1_ADDON) + """
+    </div>
+    <h3 class="work-group">Made with the F2</h3>
+    <p class="work-note">5W infrared for premium metals and plastics, 15W diode for wood, acrylic, leather and more, on the go or in the shop.</p>
+    <div class="work-grid">
+      """ + _work_tiles(F2_WORK) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_LASER%%">Ask About a Laser Project on WhatsApp</a></div>
+  </div>
+</section>
+""" + _work_tiles(X1_NOW) + """
     </div>
     <h3 class="work-group">With add-on lasers (UV, MOPA, Fiber)</h3>
     <p class="work-note">These need the X1's add-on laser modules, ask us about them as we expand.</p>
