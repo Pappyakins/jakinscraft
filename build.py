@@ -401,15 +401,8 @@ X1_ADDON = [
 F2_WORK = [
     ("assets/samples/f2-ir.jpg", "5W infrared: colour metal tags, tumblers, rings, knives, pendants", "5W IR · Metals and plastics", True),
     ("assets/samples/f2-diode.jpg", "15W diode: slate, denim, wood, glass, leather, paper, acrylic", "15W Diode · Everyday materials", True),
-    ("assets/samples/f2-kris-lucenti.jpg", "On-site event engraving", "F2 · Kris Lucenti, xTool community"),
-    ("assets/samples/f2-odd-essentials.jpg", "Craft fair metal pendants and earrings", "F2 · Odd Essentials, xTool community"),
-    ("assets/samples/f2-jellydots.jpg", "Ceramic keepsakes in greeting cards", "F2 · Jellydots, xTool community"),
-    ("assets/samples/f2-sheepdog.jpg", "Leather and metal patches and tags", "F2 · SheepDog Designs, xTool community"),
-    ("assets/samples/f2-arlyn-marie.jpg", "Event engraving: wine glasses and tumblers", "F2 · Arlyn Marie, xTool community"),
-    ("assets/samples/f2-diedrich-wieler.jpg", "Colour metal engraving at a market", "F2 · Diedrich Wieler, xTool community"),
-    ("assets/samples/f2-abbys-attic.jpg", "Wallets, tags and bracelets", "F2 · AbbysAtticCreations, xTool community"),
-    ("assets/samples/f2-jaccobb.jpg", "Stainless steel bottles, mugs and tumblers", "F2 · Jaccobb, xTool community"),
 ]
+
 
 def _work_tiles(items):
     parts = []
