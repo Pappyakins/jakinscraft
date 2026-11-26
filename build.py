@@ -58,7 +58,7 @@ HTML = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JakinsCraft — Custom UV-Printed Gear | Toronto</title>
-<meta name="description" content="JakinsCraft: custom NFC & QR business logo pendants, UV-printed 30oz tumblers and QR keychains. Designed in Toronto.">
+<meta name="description" content="JakinsCraft: custom NFC & QR business logo pendants, UV-printed 30oz tumblers, QR keychains, and laser engraving and cutting. Designed in Toronto.">
 <link rel="icon" href="%%LOGO_PATH%%">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,6 +141,17 @@ nav{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.92);backdrop-filt
 .tile b{color:var(--accent-soft);font-weight:600}
 .tile.tile-photo{padding:0;overflow:hidden;border-style:solid}
 .tile.tile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+/* laser work */
+.work-group{font-size:1.35rem;margin:36px 0 6px;color:var(--text)}
+.work-note{color:var(--muted);font-size:.93rem;margin-bottom:18px}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.work-tile{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.work-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#0e0e10}
+.work-tile.wide{grid-column:1/-1}
+.work-tile.wide img{aspect-ratio:21/9}
+.work-cap{padding:12px 14px 14px}
+.work-cap b{display:block;font-size:.95rem;font-weight:600;margin-bottom:2px}
+.work-cap span{color:var(--accent-soft);font-size:.8rem}
 /* footer */
 footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem}
 footer .fbrand{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:6px}
@@ -156,7 +167,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -174,6 +185,7 @@ footer .powered b{color:var(--accent)}
       <span class="badge">Toronto, Canada</span>
       <span class="badge">Full-colour UV printing</span>
       <span class="badge">NFC + QR smart products</span>
+      <span class="badge">Laser engraving &amp; cutting</span>
     </div>
   </div>
 </header>
@@ -223,13 +235,15 @@ footer .powered b{color:var(--accent)}
       <div class="card">
         <img class="machine-photo" src="%%IMG_F2%%" alt="xTool F2 laser engraver" loading="lazy">
         <h3>Laser <em>Engraving</em></h3>
-        <p>Precision engraving with our xTool F2 — crisp logos and text on wood, metal, acrylic, leather, tumblers and more. Perfect for gifts, signage, and branded gear.</p>
+        <p>Precision engraving and cutting with our xTool X1 (55W CO2 + 20W diode galvo) and xTool F2 — crisp logos and text on wood, metal, acrylic, leather, glass, tumblers and more. Perfect for gifts, signage, and branded gear.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
         <a class="btn-wa" href="%%WA_LASER%%">Order on WhatsApp</a>
       </div>
     </div>
   </div>
 </section>
+
+%%LASER_WORK%%
 
 <section id="quote">
   <div class="wrap">
@@ -251,6 +265,7 @@ footer .powered b{color:var(--accent)}
             <option>Custom QR Keychain</option>
             <option>Custom 3D Printing</option>
             <option>Laser Engraving</option>
+            <option>Laser Cutting (X1)</option>
             <option>Bulk / Corporate Order</option>
           </select>
         </div>
@@ -346,6 +361,92 @@ document.getElementById("q-send").addEventListener("auxclick", function (e) { e.
 </html>
 """
 
+# --- Laser Work section (xTool X1 + F2 samples) ---
+# Photos are xTool's own samples of what each machine does, kept in
+# assets/samples/. Each tile is (image, title, laser tag), or
+# (image, title, laser tag, wide) for the two full F2 panels.
+X1_NOW = [
+    ("assets/samples/x1-wood-dollhouse.jpg", "Wooden dollhouse", "55W CO2 · Powerful cutting"),
+    ("assets/samples/x1-wood-mountain.jpg", "Layered mountain wood art", "55W CO2 · Powerful cutting"),
+    ("assets/samples/x1-acrylic-motorcycle.jpg", "Clear acrylic motorcycle model", "55W CO2 · Clear acrylic cutting"),
+    ("assets/samples/x1-acrylic-wedding.jpg", "Olivia and James wedding sign", "55W CO2 · Cutting and engraving"),
+    ("assets/samples/x1-glass-award.jpg", "The Legacy Award glass plaque", "55W CO2 · Surface engraving"),
+    ("assets/samples/x1-mm-leather.jpg", "Leather cap patch", "CO2 / Diode"),
+    ("assets/samples/x1-mm-stone.jpg", "Slate coasters", "Diode"),
+    ("assets/samples/x1-mm-silicone.jpg", "Silicone phone cases", "Diode"),
+    ("assets/samples/x1-mm-denim.jpg", "Denim jeans", "CO2 / Diode"),
+    ("assets/samples/x1-mm-paper.jpg", "Paper anniversary card", "CO2 / Diode"),
+    ("assets/samples/x1-mm-rubber.jpg", "Rubber stamps", "Diode"),
+    ("assets/samples/x1-door-sign.jpg", "Wooden door sign", "xTool X1"),
+    ("assets/samples/x1-tumbler.jpg", "Personalized tumbler", "xTool X1"),
+    ("assets/samples/x1-glass-ornament.jpg", "Glass ornament", "xTool X1"),
+]
+X1_ADDON = [
+    ("assets/samples/x1-wood-cat.jpg", "Framed cat portrait", "5W UV · High-detail engraving"),
+    ("assets/samples/x1-wood-relief.jpg", "Wood relief carving", "5W UV · Char-free relief"),
+    ("assets/samples/x1-acrylic-anderson.jpg", "Green acrylic Anderson card", "5W UV · Fine engraving"),
+    ("assets/samples/x1-acrylic-earrings.jpg", "Acrylic earrings", "55W CO2 + 5W UV"),
+    ("assets/samples/x1-glass-wine.jpg", "Wine glass, rotary engraving", "5W UV · Fine rotary engraving"),
+    ("assets/samples/x1-glass-tajmahal.jpg", "Taj Mahal crystal block", "5W UV · Inner engraving"),
+    ("assets/samples/x1-glass-cameo.jpg", "Glass cameo pendant", "5W UV · Relief and cutting"),
+    ("assets/samples/x1-metal-sf-plaque.jpg", "San Francisco gold plaque", "60W MOPA · Metal embossing"),
+    ("assets/samples/x1-metal-zebra.jpg", "Colour zebra art", "60W MOPA · Metal colour engraving"),
+    ("assets/samples/x1-metal-tags.jpg", "Alpencore metal tags", "30W Fiber · Batch metal marking"),
+    ("assets/samples/x1-metal-mountain.jpg", "Oval metal mountain", "60W MOPA · Thin metal cutting"),
+    ("assets/samples/x1-mm-ceramic.jpg", "Ceramic Starry Night plate", "UV / Fiber / MOPA"),
+    ("assets/samples/x1-mm-plastic.jpg", "Plastic AirPods case", "UV / MOPA"),
+    ("assets/samples/x1-mm-pearl.jpg", "Mother-of-pearl pendant", "5W UV"),
+    ("assets/samples/x1-mm-pcb.jpg", "PCB circuit board", "UV / MOPA / Fiber"),
+]
+F2_WORK = [
+    ("assets/samples/f2-ir.jpg", "5W infrared: colour metal tags, tumblers, rings, knives, pendants", "5W IR · Metals and plastics", True),
+    ("assets/samples/f2-diode.jpg", "15W diode: slate, denim, wood, glass, leather, paper, acrylic", "15W Diode · Everyday materials", True),
+    ("assets/samples/f2-kris-lucenti.jpg", "On-site event engraving", "F2 · Kris Lucenti, xTool community"),
+    ("assets/samples/f2-odd-essentials.jpg", "Craft fair metal pendants and earrings", "F2 · Odd Essentials, xTool community"),
+    ("assets/samples/f2-jellydots.jpg", "Ceramic keepsakes in greeting cards", "F2 · Jellydots, xTool community"),
+    ("assets/samples/f2-sheepdog.jpg", "Leather and metal patches and tags", "F2 · SheepDog Designs, xTool community"),
+    ("assets/samples/f2-arlyn-marie.jpg", "Event engraving: wine glasses and tumblers", "F2 · Arlyn Marie, xTool community"),
+    ("assets/samples/f2-diedrich-wieler.jpg", "Colour metal engraving at a market", "F2 · Diedrich Wieler, xTool community"),
+    ("assets/samples/f2-abbys-attic.jpg", "Wallets, tags and bracelets", "F2 · AbbysAtticCreations, xTool community"),
+    ("assets/samples/f2-jaccobb.jpg", "Stainless steel bottles, mugs and tumblers", "F2 · Jaccobb, xTool community"),
+]
+
+def _work_tiles(items):
+    parts = []
+    for it in items:
+        wide = " wide" if len(it) > 3 and it[3] else ""
+        parts.append(
+            '<div class="work-tile' + wide + '"><img src="' + it[0] + '" alt="' + it[1] + '" loading="lazy">'
+            '<div class="work-cap"><b>' + it[1] + '</b><span>' + it[2] + '</span></div></div>'
+        )
+    return "\n      ".join(parts)
+
+LASER_WORK = """
+<section id="laser-work">
+  <div class="wrap">
+    <div class="eyebrow">Laser Work</div>
+    <h2 class="sec">What the X1 and F2 can make</h2>
+    <p class="sub">Our new xTool X1 (55W CO2 + 20W diode galvo) joins the xTool F2 (5W infrared + 15W diode). Between them they cut and engrave wood, metal, glass, acrylic, leather, slate, denim, paper and more. The photos below are xTool's own samples of what each machine does, real JakinsCraft pieces coming soon as we make them.</p>
+    <h3 class="work-group">Available now on our X1</h3>
+    <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers.</p>
+    <div class="work-grid">
+      """ + _work_tiles(X1_NOW) + """
+    </div>
+    <h3 class="work-group">With add-on lasers (UV, MOPA, Fiber)</h3>
+    <p class="work-note">These need the X1's add-on laser modules, ask us about them as we expand.</p>
+    <div class="work-grid">
+      """ + _work_tiles(X1_ADDON) + """
+    </div>
+    <h3 class="work-group">Made with the F2</h3>
+    <p class="work-note">5W infrared for premium metals and plastics, 15W diode for wood, acrylic, leather and more, on the go or in the shop.</p>
+    <div class="work-grid">
+      """ + _work_tiles(F2_WORK) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_LASER%%">Ask About a Laser Project on WhatsApp</a></div>
+  </div>
+</section>
+"""
+
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -382,6 +483,7 @@ out = (HTML
        .replace("%%WA_KEYCHAIN%%", orders["keychain"])
        .replace("%%WA_PLATE_CARD%%", orders["plate_card"])
        .replace("%%WA_3DPRINT%%", orders["3dprint"])
+       .replace("%%LASER_WORK%%", LASER_WORK)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
