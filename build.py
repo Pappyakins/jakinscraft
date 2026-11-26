@@ -444,23 +444,6 @@ LASER_WORK = """
     <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_LASER%%">Ask About a Laser Project on WhatsApp</a></div>
   </div>
 </section>
-""" + _work_tiles(X1_NOW) + """
-    </div>
-    <h3 class="work-group">With add-on lasers (UV, MOPA, Fiber)</h3>
-    <p class="work-note">These need the X1's add-on laser modules, ask us about them as we expand.</p>
-    <div class="work-grid">
-      """ + _work_tiles(X1_ADDON) + """
-    </div>
-    <h3 class="work-group">Made with the F2</h3>
-    <p class="work-note">5W infrared for premium metals and plastics, 15W diode for wood, acrylic, leather and more, on the go or in the shop.</p>
-    <div class="work-grid">
-      """ + _work_tiles(F2_WORK) + """
-    </div>
-    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_LASER%%">Ask About a Laser Project on WhatsApp</a></div>
-  </div>
-</section>
-"""
-
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
