@@ -444,6 +444,7 @@ LASER_WORK = """
     <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_LASER%%">Ask About a Laser Project on WhatsApp</a></div>
   </div>
 </section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
