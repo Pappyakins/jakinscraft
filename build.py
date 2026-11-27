@@ -435,13 +435,13 @@ LASER_WORK = """
     <div class="eyebrow">Laser Work</div>
     <h2 class="sec">What the X1 and F2 can make</h2>
     <p class="sub">Our new xTool X1 (55W CO2 + 20W diode galvo) joins the xTool F2 (5W infrared + 15W diode). Between them they cut and engrave wood, metal, glass, acrylic, leather, slate, denim, paper and more. The photos below are xTool's own samples of what each machine does, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
-    <h3 class="work-group">Available now on our X1</h3>
+    <h3 class="work-group">Made with the X1's CO2 and diode lasers</h3>
     <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers.</p>
     <div class="work-grid">
       """ + _work_tiles(X1_NOW) + """
     </div>
-    <h3 class="work-group">With add-on lasers (UV, MOPA, Fiber)</h3>
-    <p class="work-note">These need the X1's add-on laser modules, ask us about them as we expand.</p>
+    <h3 class="work-group">Made with the X1's UV, MOPA and Fiber lasers</h3>
+    <p class="work-note">UV for crystal and glass, MOPA and Fiber for metal colour, embossing and marking.</p>
     <div class="work-grid">
       """ + _work_tiles(X1_ADDON) + """
     </div>
@@ -459,10 +459,9 @@ LASER_WORK = """
 # A photo becomes a 3D model two ways: 3D Photo mode gives a depth map
 # for 2.5D relief carving (wood, acrylic, slate), 3D Modeling mode gives
 # a mesh for inner engraving in crystal. Relief runs on the X1's 55W CO2
-# + 20W diode galvo, available now. Inner engraving in crystal needs a
-# UV galvo laser, which the X1 does not have yet, so those products are
-# grouped as needing the 5W UV add-on. NEVER list crystal inner
-# engraving as available now. Photos are xTool/Atomm samples of the
+# + 20W diode galvo, inner engraving in crystal on the UV laser. Per
+# Pappy Nov 26, 2026, all products are listed as available, assume he
+# has the kit it takes to make them. Photos are xTool/Atomm samples of the
 # technique, in assets/crystal/; tiles without a real photo yet use the
 # "Photo coming soon" tile. Prices are CAD starting prices from a Nov 26,
 # 2026 market survey (Etsy Canada 3D crystal and wood relief listings):
@@ -498,16 +497,11 @@ CRYSTAL_3D = """
   <div class="wrap">
     <div class="eyebrow">3D Crystal &amp; Relief</div>
     <h2 class="sec">Your photo, carved in 3D</h2>
-    <p class="sub">Send us a photo and AI turns it into a 3D model: a 2.5D relief carved into wood, acrylic or slate, a true 3D portrait floating inside crystal, or a laser-cut 3D ornament. Relief work is available now on our X1 (55W CO2 + 20W diode galvo). Crystal inner engraving needs the X1's 5W UV add-on laser, ask us about it as we expand. The photos below are xTool and Atomm samples of the technique, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
-    <h3 class="work-group">Available now — 2.5D relief &amp; laser-cut</h3>
-    <p class="work-note">Carved and cut with the 55W CO2 and 20W diode galvo lasers, 256 levels of grey for real depth on relief pieces.</p>
+    <p class="sub">Send us a photo and AI turns it into a 3D model: a 2.5D relief carved into wood, acrylic or slate, a true 3D portrait floating inside crystal, or a laser-cut 3D ornament. Relief work runs on our X1 (55W CO2 + 20W diode galvo), crystal inner engraving on our UV laser. The photos below are xTool and Atomm samples of the technique, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">2.5D relief, crystal inner engraving &amp; laser-cut</h3>
+    <p class="work-note">Carved and cut with the 55W CO2 and 20W diode galvo lasers, 256 levels of grey for real depth on relief pieces. Crystal pieces are engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
     <div class="work-grid">
-      """ + _work_tiles(RELIEF_NOW) + """
-    </div>
-    <h3 class="work-group">Needs the 5W UV add-on — crystal inner engraving</h3>
-    <p class="work-note">Engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
-    <div class="work-grid">
-      """ + _work_tiles(CRYSTAL_UV) + """
+      """ + _work_tiles(RELIEF_NOW + CRYSTAL_UV) + """
     </div>
     <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_CRYSTAL%%">Ask About a 3D Keepsake on WhatsApp</a></div>
   </div>
@@ -517,10 +511,10 @@ CRYSTAL_3D = """
 # --- Zodiac Birthday Gifts section (Atomm Zodiac Signs generator) ---
 # All 12 signs as personalized birthday gifts: the recipient's sign, name
 # and birth date engraved on the piece. Relief plaques run on the X1's
-# 55W CO2 + 20W diode galvo, available now. Crystal inner engraving needs
-# the 5W UV add-on laser, which the X1 does not have yet, so those
-# products are grouped as needing the UV add-on. NEVER list crystal inner
-# engraving as available now. No Atomm sample photos were fetchable for
+# 55W CO2 + 20W diode galvo, crystal inner engraving on the UV laser.
+# Per Pappy Nov 26, 2026, all products are listed as available, assume
+# he has the kit it takes to make them. No Atomm sample photos were
+# fetchable for
 # zodiac (the generator page is an interactive designer with no
 # extractable images), so the 12 sign tiles are JakinsCraft-made sign
 # tiles (gold glyph on the site's dark purple, sign name and dates), and
@@ -556,16 +550,11 @@ ZODIAC = """
   <div class="wrap">
     <div class="eyebrow">Zodiac Birthday Gifts</div>
     <h2 class="sec">Their sign, made personal</h2>
-    <p class="sub">A birthday gift with their star sign on it, personalized with their name and birth date. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave it as a 2.5D relief plaque in wood, acrylic or slate, or as a portrait floating inside crystal. Relief plaques are available now on our X1 (55W CO2 + 20W diode galvo). Crystal inner engraving needs the X1's 5W UV add-on laser, ask us about it as we expand. The sign tiles below are our own designs, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
-    <h3 class="work-group">Available now — zodiac relief plaques</h3>
-    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name and birth date.</p>
+    <p class="sub">A birthday gift with their star sign on it, personalized with their name and birth date. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave it as a 2.5D relief plaque in wood, acrylic or slate, or as a portrait floating inside crystal. Relief plaques run on our X1 (55W CO2 + 20W diode galvo), crystal pieces on our UV laser. The sign tiles below are our own designs, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Zodiac relief plaques &amp; crystal</h3>
+    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name and birth date. Crystal pieces are engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
     <div class="work-grid">
-      """ + _work_tiles(ZODIAC_NOW) + """
-    </div>
-    <h3 class="work-group">Needs the 5W UV add-on — zodiac crystal</h3>
-    <p class="work-note">Engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
-    <div class="work-grid">
-      """ + _work_tiles(ZODIAC_UV) + """
+      """ + _work_tiles(ZODIAC_NOW + ZODIAC_UV) + """
     </div>
     <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_ZODIAC%%">Ask About a Zodiac Gift on WhatsApp</a></div>
   </div>
@@ -579,9 +568,9 @@ ZODIAC = """
 # engraved heart. The buyer supplies their photo, song title, artist,
 # play time and their OWN Spotify code (the tool does not create codes;
 # the buyer makes one free in the Spotify app). All laser-cut on the X1's
-# 55W CO2 + 20W diode galvo, available now. NEVER put the frame in the
-# UV add-on group. NOTE: the 3D Crystal & Relief section already has a
-# "Crystal photo block with music code" in the UV group, that is a
+# 55W CO2 + 20W diode galvo, available now. NOTE: the 3D Crystal &
+# Relief section already has a "Crystal photo block with music code"
+# in the crystal section, that is a
 # different product (crystal inner engraving), do not duplicate or remove
 # it. No Atomm sample photos were fetchable for this tool (the page is a
 # community generator with no extractable images), so all tiles use the
