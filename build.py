@@ -53,6 +53,7 @@ orders = {
     "music": wa("Hi JakinsCraft! I'm interested in a music photo frame. Here's what I need:"),
     "wordtiles": wa("Hi JakinsCraft! I'm interested in a family word tile display. Here's what I need:"),
     "babyblocks": wa("Hi JakinsCraft! I'm interested in a baby photo block. Here's what I need:"),
+    "giftcard": wa("Hi JakinsCraft! I'm interested in a gift card holder box. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -173,7 +174,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#baby-blocks">Baby Photo Blocks</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#baby-blocks">Baby Photo Blocks</a><a href="#gift-card">Gift Card Boxes</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -260,6 +261,8 @@ footer .powered b{color:var(--accent)}
 %%WORD_TILES%%
 
 %%BABY_BLOCKS%%
+
+%%GIFT_CARD%%
 
 <section id="quote">
   <div class="wrap">
@@ -698,6 +701,55 @@ BABY_BLOCKS_HTML = """
   </div>
 </section>
 """
+# --- Gift Card Holder Boxes section (Atomm Card Giftbox generator) ---
+# NOT a folded cardstock box: a laser-cut rigid gift-CARD holder box, a
+# glued sleeve with a sliding inner drawer that holds a standard
+# gift/credit card (85.5 x 54 mm), with an engraved front and a knob
+# that rides in a slot. Box size 102 x 65 x 20 mm, built for 3 mm
+# (1/8 in) stock, laser-cut sheet only, plywood, MDF or acrylic.
+# One SVG export with every part laid out flat, ready to cut. 6
+# occasion templates: Birthday, Christmas Day, Father's Day, Mother's
+# Day, Wedding Day and Wedding Day 2. Customization: editable text,
+# 35 fonts, an elements library (Christmas, Halloween, Wedding, Flora
+# and Fauna, Stars and Moon, New Year Party), left and right decoration
+# slots, material choice. No photo upload. The buyer supplies the
+# message, name, occasion and material; the gift card itself is NOT
+# included. Per Pappy Nov 26, 2026, all products are listed as
+# available, assume he has the kit it takes to make them, no
+# availability split. No Atomm sample photos were fetchable for this
+# tool (the generator page is a JavaScript designer with no
+# extractable images), so all tiles use the honest "Photo coming
+# soon" tile. Prices are CAD starting prices from a Nov 26, 2026
+# market survey (Etsy Canada: flat laser-cut wooden gift card
+# holders ~US$9, personalized small wooden keepsake boxes CA$25-60,
+# digital SVG files only CA$3-5): set at or above the market
+# midpoint for a finished personalized box. Final quote depends on
+# size/design.
+GIFT_CARD_BOXES = [
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Birthday", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Christmas Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Father's Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Mother's Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Wedding Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $25"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Wedding Day 2", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $25"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, custom occasion", "Laser-cut · Your text and elements", "From $25"),
+]
+
+GIFT_CARD_HTML = """
+<section id="gift-card">
+  <div class="wrap">
+    <div class="eyebrow">Gift Card Boxes</div>
+    <h2 class="sec">A gift card, worth opening</h2>
+    <p class="sub">A gift card deserves better than an envelope. This is a rigid laser-cut holder box, a glued sleeve with a sliding inner drawer that holds a standard gift or credit card (85.5 x 54 mm), with an engraved front and a knob that rides in a slot. Box size 102 x 65 x 20 mm, cut from 3 mm plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo). Pick one of 6 occasion designs, Birthday, Christmas Day, Father's Day, Mother's Day, Wedding Day or Wedding Day 2, or your own custom text and decorations from 35 fonts and the Christmas, Halloween, Wedding, Flora and Fauna, Stars and Moon and New Year Party elements. You supply the message, name, occasion and material, the gift card itself is not included. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Gift card holder boxes</h3>
+    <p class="work-note">Sliding-lid drawer box, engraved front, knob in slot. One SVG export, every part laid out flat, ready to cut.</p>
+    <div class="work-grid">
+      """ + _work_tiles(GIFT_CARD_BOXES) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_GIFTCARD%%">Ask About a Gift Card Box on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -740,12 +792,14 @@ out = (HTML
        .replace("%%MUSIC_FRAMES%%", MUSIC_FRAMES)
        .replace("%%WORD_TILES%%", WORD_TILES_HTML)
        .replace("%%BABY_BLOCKS%%", BABY_BLOCKS_HTML)
+       .replace("%%GIFT_CARD%%", GIFT_CARD_HTML)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_CRYSTAL%%", orders["crystal"])
        .replace("%%WA_ZODIAC%%", orders["zodiac"])
        .replace("%%WA_MUSIC%%", orders["music"])
        .replace("%%WA_WORDTILES%%", orders["wordtiles"])
        .replace("%%WA_BABYBLOCKS%%", orders["babyblocks"])
+       .replace("%%WA_GIFTCARD%%", orders["giftcard"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
