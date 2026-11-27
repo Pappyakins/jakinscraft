@@ -50,6 +50,7 @@ orders = {
     "laser": wa("Hi JakinsCraft! I'm interested in laser engraving. Here's what I need:"),
     "crystal": wa("Hi JakinsCraft! I'm interested in a 3D crystal or relief keepsake. Here's what I need:"),
     "zodiac": wa("Hi JakinsCraft! I'm interested in a zodiac birthday gift. Here's what I need:"),
+    "music": wa("Hi JakinsCraft! I'm interested in a music photo frame. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -170,7 +171,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -251,6 +252,8 @@ footer .powered b{color:var(--accent)}
 %%CRYSTAL_3D%%
 
 %%ZODIAC%%
+
+%%MUSIC_FRAMES%%
 
 <section id="quote">
   <div class="wrap">
@@ -568,6 +571,47 @@ ZODIAC = """
   </div>
 </section>
 """
+
+# --- Music Photo Frames section (Atomm Music Photo Frame generator) ---
+# A personalized music-player photo frame, laser-cut in three layers: a
+# front with a photo window, a spacer with a photo pocket open at the top,
+# and a back with a finger notch, plus an optional stand and an applied or
+# engraved heart. The buyer supplies their photo, song title, artist,
+# play time and their OWN Spotify code (the tool does not create codes;
+# the buyer makes one free in the Spotify app). All laser-cut on the X1's
+# 55W CO2 + 20W diode galvo, available now. NEVER put the frame in the
+# UV add-on group. NOTE: the 3D Crystal & Relief section already has a
+# "Crystal photo block with music code" in the UV group, that is a
+# different product (crystal inner engraving), do not duplicate or remove
+# it. No Atomm sample photos were fetchable for this tool (the page is a
+# community generator with no extractable images), so all tiles use the
+# honest "Photo coming soon" tile. Prices are CAD starting prices from a
+# Nov 26, 2026 market survey (Etsy Canada personalized music plaques and
+# photo frames: acrylic song plaques CA$24-46, wooden-stand plaques
+# CA$34-60, LED night light plaques CA$19-37): set at or above the
+# market midpoint. Final quote depends on size/design.
+MUSIC_NOW = [
+    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame, 5x7 in", "Laser-cut · CO2 / Diode", "From $45"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame, 8x10 in", "Laser-cut · CO2 / Diode", "From $55"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame with display stand", "Laser-cut · CO2 / Diode", "From $55"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame with engraved heart", "Laser-cut · CO2 / Diode", "From $50"),
+]
+
+MUSIC_FRAMES = """
+<section id="music-frames">
+  <div class="wrap">
+    <div class="eyebrow">Music Photo Frames</div>
+    <h2 class="sec">Your song, in a frame</h2>
+    <p class="sub">Your favourite photo and your song, built into a layered laser-cut frame: a front with a photo window, a spacer with a photo pocket, and a back with a finger notch, so the photo slides in and out. We engrave the song title, artist and play time, and your scannable Spotify code, so a phone scan plays the song. You supply your own Spotify code, made free in the Spotify app, and your photo. Available now on our X1 (55W CO2 + 20W diode galvo), in wood or acrylic. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Available now — laser-cut music frames</h3>
+    <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers, three layers for real 3D depth.</p>
+    <div class="work-grid">
+      """ + _work_tiles(MUSIC_NOW) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_MUSIC%%">Ask About a Music Frame on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -607,9 +651,11 @@ out = (HTML
        .replace("%%LASER_WORK%%", LASER_WORK)
        .replace("%%CRYSTAL_3D%%", CRYSTAL_3D)
        .replace("%%ZODIAC%%", ZODIAC)
+       .replace("%%MUSIC_FRAMES%%", MUSIC_FRAMES)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_CRYSTAL%%", orders["crystal"])
        .replace("%%WA_ZODIAC%%", orders["zodiac"])
+       .replace("%%WA_MUSIC%%", orders["music"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
