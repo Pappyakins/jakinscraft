@@ -54,6 +54,7 @@ orders = {
     "wordtiles": wa("Hi JakinsCraft! I'm interested in a family word tile display. Here's what I need:"),
     "babyblocks": wa("Hi JakinsCraft! I'm interested in a baby photo block. Here's what I need:"),
     "giftcard": wa("Hi JakinsCraft! I'm interested in a gift card holder box. Here's what I need:"),
+    "nails": wa("Hi JakinsCraft! I'm interested in Christmas press-on nails. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -174,7 +175,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#baby-blocks">Baby Photo Blocks</a><a href="#gift-card">Gift Card Boxes</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#baby-blocks">Baby Photo Blocks</a><a href="#gift-card">Gift Card Boxes</a><a href="#christmas-nails">Christmas Nails</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -263,6 +264,8 @@ footer .powered b{color:var(--accent)}
 %%BABY_BLOCKS%%
 
 %%GIFT_CARD%%
+
+%%NAILS%%
 
 <section id="quote">
   <div class="wrap">
@@ -746,6 +749,38 @@ GIFT_CARD_HTML = """
   </div>
 </section>
 """
+# --- Christmas Nails section (eufyMake community sample design, Katniss_e) ---
+# UV-printed press-on nails with Christmas designs, made to order in
+# the buyer's size, reusable. Application kit: glue, file, buffer,
+# adhesive tabs and wipes. Photos are crops of one sample photo: the
+# full set of 10 nails on a stand, top row, bottom row, gingerbread
+# close-up. Prices are CAD starting prices from a Nov 27, 2026
+# market survey (Etsy Canada: set of 10 custom Christmas press-on
+# nails CA$29.52-70.00, cluster CA$38.58-45.14, midpoint about $40):
+# set at or above the market midpoint. Final quote depends on
+# size/design.
+NAILS = [
+    ("assets/nails/christmas-nails-set.jpg", "Christmas press-on nails, set of 10, mixed designs", "UV print · eufyMake E1", "From $45"),
+    ("assets/nails/christmas-nails-bottom-row.jpg", "Christmas press-on nails, set of 10 with application kit", "UV print · eufyMake E1", "From $55"),
+    ("assets/nails/christmas-nails-top-row.jpg", "Christmas press-on nails, set of 20", "UV print · eufyMake E1", "From $80"),
+    ("assets/nails/christmas-nails-gingerbread.jpg", "Custom Christmas press-on nails, your design or photo, set of 10", "UV print · eufyMake E1", "From $65"),
+]
+
+NAILS_HTML = """
+<section id="christmas-nails">
+  <div class="wrap">
+    <div class="eyebrow">Christmas Nails</div>
+    <h2 class="sec">Festive nails, made to order</h2>
+    <p class="sub">UV-printed press-on nails with Christmas designs, made to order in your size, reusable. Pick a set of 10 in mixed Christmas designs, add the application kit with glue, file, buffer, adhesive tabs and wipes, go bigger with a set of 20, or send us your own design or photo for a custom set of 10. The photo is a sample design from the eufyMake community (Katniss_e); real JakinsCraft sets coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Christmas press-on nails</h3>
+    <p class="work-note">Made to order in your size. Reusable press-on nails.</p>
+    <div class="work-grid">
+      """ + _work_tiles(NAILS) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_NAILS%%">Ask About Christmas Nails on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -789,6 +824,7 @@ out = (HTML
        .replace("%%WORD_TILES%%", WORD_TILES_HTML)
        .replace("%%BABY_BLOCKS%%", BABY_BLOCKS_HTML)
        .replace("%%GIFT_CARD%%", GIFT_CARD_HTML)
+       .replace("%%NAILS%%", NAILS_HTML)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_CRYSTAL%%", orders["crystal"])
        .replace("%%WA_ZODIAC%%", orders["zodiac"])
@@ -796,6 +832,7 @@ out = (HTML
        .replace("%%WA_WORDTILES%%", orders["wordtiles"])
        .replace("%%WA_BABYBLOCKS%%", orders["babyblocks"])
        .replace("%%WA_GIFTCARD%%", orders["giftcard"])
+       .replace("%%WA_NAILS%%", orders["nails"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
