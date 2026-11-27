@@ -52,6 +52,7 @@ orders = {
     "zodiac": wa("Hi JakinsCraft! I'm interested in a zodiac birthday gift. Here's what I need:"),
     "music": wa("Hi JakinsCraft! I'm interested in a music photo frame. Here's what I need:"),
     "wordtiles": wa("Hi JakinsCraft! I'm interested in a family word tile display. Here's what I need:"),
+    "babyblocks": wa("Hi JakinsCraft! I'm interested in a baby photo block. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -172,7 +173,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#baby-blocks">Baby Photo Blocks</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -257,6 +258,8 @@ footer .powered b{color:var(--accent)}
 %%MUSIC_FRAMES%%
 
 %%WORD_TILES%%
+
+%%BABY_BLOCKS%%
 
 <section id="quote">
   <div class="wrap">
@@ -648,6 +651,53 @@ WORD_TILES_HTML = """
   </div>
 </section>
 """
+# --- Baby Photo Blocks section (Atomm photo block generator) ---
+# A laser-cut baby photo block that stands on a shelf, previewed in 3D
+# before making it. Baby's photo, name and birth details (date, time,
+# weight, length, hospital) on the block, 7 shapes: rectangle, arch,
+# oval, round, scalloped, cloud or heart. The block has a tab or
+# notches for its stand; the stand is a slot base with an engraved
+# line in front or two slot-on feet. Optional raised name layer cut
+# from gold, silver or rose gold mirror acrylic and glued on the
+# front. Two finishes: UV print, full color, mirrored on the back of
+# clear acrylic with a white layer behind it, or printed straight
+# onto white acrylic or wood, on the eufyMake E1; or laser engrave,
+# the photo turned to greys and engraved into birch, walnut, black
+# or clear acrylic on the X1's 55W CO2 + 20W diode galvo, no printer
+# needed. 12 templates, 3 layouts (name card, details panel, text
+# over the photo), 8 color themes, 8 artworks (bunting, balloons,
+# rainbow, moon and stars, leafy sprigs), 12 fonts. Per Pappy Nov 26,
+# 2026, all products are listed as available, assume he has the kit
+# it takes to make them, no availability split. The one real photo is
+# Atomm's own photo-block sample (assets/baby-blocks/baby-photo-
+# block-sample.jpg); the rest use the honest "Photo coming soon"
+# tile. Prices are CAD starting prices from a Nov 26, 2026 market
+# survey (Etsy Canada personalized baby birth blocks CA$26-56,
+# birth announcement plaques CA$32-72, framed stats plaques to
+# CA$72): set at or above the market midpoint. Final quote depends
+# on size/design. Buyer supplies the baby photo and birth details.
+BABY_BLOCKS = [
+    ("assets/baby-blocks/baby-photo-block-sample.jpg", "Baby photo block, UV-printed, clear acrylic", "UV print · eufyMake E1", "From $65"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Baby photo block, laser-engraved, wood or acrylic", "Laser engrave · CO2 / Diode", "From $55"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Baby photo block with raised mirror name", "Mirror acrylic name · Laser-cut", "From $75"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Baby photo block set, twins or siblings, two blocks", "UV print or laser engrave", "From $95"),
+]
+
+BABY_BLOCKS_HTML = """
+<section id="baby-blocks">
+  <div class="wrap">
+    <div class="eyebrow">Baby Photo Blocks</div>
+    <h2 class="sec">Welcome, little one</h2>
+    <p class="sub">Your baby's photo, name and birth details on a block that stands on the shelf, in one of 7 shapes: rectangle, arch, oval, round, scalloped, cloud or heart. We UV-print it in full color on clear acrylic on our eufyMake E1, or laser-engrave it in greys into birch, walnut, black or clear acrylic on our X1 (55W CO2 + 20W diode galvo). Every block comes with its stand, a slot base with an engraved line in front or two slot-on feet, and an optional raised name in gold, silver or rose gold mirror acrylic. You supply the photo and the birth details, name, date, time, weight, length and hospital, and pick from 12 templates, 3 layouts, 8 color themes, 8 artworks and 12 fonts. The photo below is Atomm's own sample of the design, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Baby photo blocks</h3>
+    <p class="work-note">Stand included with every block. Raised name layer in mirror acrylic, 2-3 mm thick.</p>
+    <div class="work-grid">
+      """ + _work_tiles(BABY_BLOCKS) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_BABYBLOCKS%%">Ask About a Baby Photo Block on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -689,11 +739,13 @@ out = (HTML
        .replace("%%ZODIAC%%", ZODIAC)
        .replace("%%MUSIC_FRAMES%%", MUSIC_FRAMES)
        .replace("%%WORD_TILES%%", WORD_TILES_HTML)
+       .replace("%%BABY_BLOCKS%%", BABY_BLOCKS_HTML)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_CRYSTAL%%", orders["crystal"])
        .replace("%%WA_ZODIAC%%", orders["zodiac"])
        .replace("%%WA_MUSIC%%", orders["music"])
        .replace("%%WA_WORDTILES%%", orders["wordtiles"])
+       .replace("%%WA_BABYBLOCKS%%", orders["babyblocks"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
