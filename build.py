@@ -559,9 +559,9 @@ ZODIAC = """
   <div class="wrap">
     <div class="eyebrow">Zodiac Birthday Gifts</div>
     <h2 class="sec">Their sign, made personal</h2>
-    <p class="sub">A birthday gift with their star sign on it, personalized with their name and birth date. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave it as a 2.5D relief plaque in wood, acrylic or slate, or as a portrait floating inside crystal. Relief plaques run on our X1 (55W CO2 + 20W diode galvo), crystal pieces on our UV laser. The sign tiles below are our own designs, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">A birthday gift with their star sign on it, personalized with their name and their constellation chart, mapped from their birth date, time and place. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave the chart as a 2.5D relief plaque in wood, acrylic or slate, a rectangular acrylic plaque, a circular light sign or a laser-cut ornament, or inside crystal as a cube or a glass sphere on a wooden LED base. Relief plaques run on our X1 (55W CO2 + 20W diode galvo), crystal pieces on our UV laser. The sign tiles below are our own designs, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Zodiac relief plaques &amp; crystal</h3>
-    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name and birth date. Crystal pieces are engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
+    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name, birth date, time and place, so the star chart is theirs, not just their sign. Crystal pieces are engraved inside clear K9/K5 crystal with the UV laser, a crystal cube or a glass sphere on a wooden LED base, nothing printed on top and nothing wears off.</p>
     <div class="work-grid">
       """ + _work_tiles(ZODIAC_NOW + ZODIAC_UV) + """
     </div>
