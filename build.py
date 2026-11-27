@@ -48,6 +48,7 @@ orders = {
     "keychain": wa("Hi JakinsCraft! I'd like to order a custom QR keychain."),
     "3dprint": wa("Hi JakinsCraft! I'm interested in custom 3D printing. Here's what I need:"),
     "laser": wa("Hi JakinsCraft! I'm interested in laser engraving. Here's what I need:"),
+    "crystal": wa("Hi JakinsCraft! I'm interested in a 3D crystal or relief keepsake. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -168,7 +169,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -245,6 +246,8 @@ footer .powered b{color:var(--accent)}
 </section>
 
 %%LASER_WORK%%
+
+%%CRYSTAL_3D%%
 
 <section id="quote">
   <div class="wrap">
@@ -445,6 +448,65 @@ LASER_WORK = """
   </div>
 </section>
 """
+
+# --- 3D Crystal & Relief section (Atomm AI 3D Model Generator) ---
+# A photo becomes a 3D model two ways: 3D Photo mode gives a depth map
+# for 2.5D relief carving (wood, acrylic, slate), 3D Modeling mode gives
+# a mesh for inner engraving in crystal. Relief runs on the X1's 55W CO2
+# + 20W diode galvo, available now. Inner engraving in crystal needs a
+# UV galvo laser, which the X1 does not have yet, so those products are
+# grouped as needing the 5W UV add-on. NEVER list crystal inner
+# engraving as available now. Photos are xTool/Atomm samples of the
+# technique, in assets/crystal/; tiles without a real photo yet use the
+# "Photo coming soon" tile. Prices are CAD starting prices from a Nov 26,
+# 2026 market survey (Etsy Canada 3D crystal and wood relief listings):
+# set at or above the market midpoint. Final quote depends on size/design.
+RELIEF_NOW = [
+    ("assets/crystal/crystal-coming-soon.jpg", "Portrait relief plaque, wood", "2.5D relief · CO2 / Diode", "From $115"),
+    ("assets/crystal/relief-pet-dog.jpg", "Pet portrait relief, wood", "2.5D relief · CO2 / Diode", "From $95"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Family portrait relief plaque", "2.5D relief · CO2 / Diode", "From $125"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Memorial relief plaque", "2.5D relief · CO2 / Diode", "From $110"),
+    ("assets/crystal/relief-stone-eye.jpg", "Stone relief art plaque", "2.5D relief · CO2 / Diode", "From $85"),
+    ("assets/crystal/relief-wildlife-giraffe.jpg", "Wildlife relief plaque, stone", "2.5D relief · CO2 / Diode", "From $85"),
+    ("assets/crystal/relief-slate-eye.jpg", "Slate relief plaque", "2.5D relief · CO2 / Diode", "From $55"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Acrylic edge-lit relief panel", "2.5D relief · CO2 / Diode", "From $65"),
+    ("assets/crystal/relief-animal-giraffe.jpg", "Animal portrait relief, stone", "2.5D relief · CO2 / Diode", "From $85"),
+    ("assets/crystal/crystal-coming-soon.jpg", "3D house ornament, reindeer", "Laser-cut · CO2 / Diode", "From $20"),
+]
+CRYSTAL_UV = [
+    ("assets/crystal/crystal-portrait-block.jpg", "Crystal photo block, portrait", "5W UV · Inner engraving", "From $65"),
+    ("assets/crystal/crystal-wedding-block.jpg", "Couple portrait crystal block", "5W UV · Inner engraving", "From $75"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Crystal photo block with music code", "5W UV · Inner engraving", "From $75"),
+    ("assets/crystal/crystal-jellyfish-cube.jpg", "Crystal art cube", "5W UV · Inner engraving", "From $70"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Crystal keychain, name pendant", "5W UV · Inner engraving", "From $25"),
+    ("assets/crystal/crystal-led-family.jpg", "LED night light, portrait block", "5W UV · Inner engraving", "From $85"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Heart keepsake, portrait", "5W UV · Inner engraving", "From $55"),
+    ("assets/crystal/crystal-pug-cube.jpg", "Pet memorial crystal cube", "5W UV · Inner engraving", "From $65"),
+    ("assets/crystal/crystal-galaxy-ball.jpg", "Crystal ball, galaxy", "5W UV · Inner engraving", "From $75"),
+    ("assets/crystal/crystal-eiffel-block.jpg", "Landmark crystal block", "5W UV · Inner engraving", "From $65"),
+    ("assets/crystal/crystal-city-block.jpg", "Cityscape crystal block", "5W UV · Inner engraving", "From $60"),
+]
+
+CRYSTAL_3D = """
+<section id="crystal-3d">
+  <div class="wrap">
+    <div class="eyebrow">3D Crystal &amp; Relief</div>
+    <h2 class="sec">Your photo, carved in 3D</h2>
+    <p class="sub">Send us a photo and AI turns it into a 3D model: a 2.5D relief carved into wood, acrylic or slate, a true 3D portrait floating inside crystal, or a laser-cut 3D ornament. Relief work is available now on our X1 (55W CO2 + 20W diode galvo). Crystal inner engraving needs the X1's 5W UV add-on laser, ask us about it as we expand. The photos below are xTool and Atomm samples of the technique, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Available now — 2.5D relief &amp; laser-cut</h3>
+    <p class="work-note">Carved and cut with the 55W CO2 and 20W diode galvo lasers, 256 levels of grey for real depth on relief pieces.</p>
+    <div class="work-grid">
+      """ + _work_tiles(RELIEF_NOW) + """
+    </div>
+    <h3 class="work-group">Needs the 5W UV add-on — crystal inner engraving</h3>
+    <p class="work-note">Engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
+    <div class="work-grid">
+      """ + _work_tiles(CRYSTAL_UV) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_CRYSTAL%%">Ask About a 3D Keepsake on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -482,7 +544,9 @@ out = (HTML
        .replace("%%WA_PLATE_CARD%%", orders["plate_card"])
        .replace("%%WA_3DPRINT%%", orders["3dprint"])
        .replace("%%LASER_WORK%%", LASER_WORK)
+       .replace("%%CRYSTAL_3D%%", CRYSTAL_3D)
        .replace("%%WA_LASER%%", orders["laser"])
+       .replace("%%WA_CRYSTAL%%", orders["crystal"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
