@@ -51,6 +51,7 @@ orders = {
     "crystal": wa("Hi JakinsCraft! I'm interested in a 3D crystal or relief keepsake. Here's what I need:"),
     "zodiac": wa("Hi JakinsCraft! I'm interested in a zodiac birthday gift. Here's what I need:"),
     "music": wa("Hi JakinsCraft! I'm interested in a music photo frame. Here's what I need:"),
+    "wordtiles": wa("Hi JakinsCraft! I'm interested in a family word tile display. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -171,7 +172,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#music-frames">Music Frames</a><a href="#word-tiles">Word Tiles</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -254,6 +255,8 @@ footer .powered b{color:var(--accent)}
 %%ZODIAC%%
 
 %%MUSIC_FRAMES%%
+
+%%WORD_TILES%%
 
 <section id="quote">
   <div class="wrap">
@@ -601,6 +604,50 @@ MUSIC_FRAMES = """
   </div>
 </section>
 """
+# --- Family Word Tiles section (Atomm Family Word Tile Studio) ---
+# Family names and meaningful words arranged into a connected crossword
+# layout, matching letters intersect and share one tile. Up to 20 words,
+# max 24 letters each, English A-Z only. Tile size and spacing, square or
+# rounded corners, letter styles Classic Bold, Traditional Serif or
+# Typewriter, Scrabble-style point numbers on or off. Laser-cut and
+# engraved on the X1's 55W CO2 + 20W diode galvo (wood, plywood, MDF,
+# acrylic), or UV-printed as 300 DPI PNG artwork on the eufyMake E1
+# (acrylic, wood, metal and other flat substrates). Per Pappy Nov 26,
+# 2026, all products are listed as available, assume he has the kit it
+# takes to make them, no availability split. A backing board, frame or
+# stand is extra unless the listing says it is included; the tool does
+# not supply backing-board cut files, frames or stands. The one real
+# photo is Atomm's own Family Word Tile Studio sample (assets/word-
+# tiles/family-word-tile-studio.jpg); the rest use the honest "Photo
+# coming soon" tile. Prices are CAD starting prices from a Nov 26, 2026
+# market survey (Etsy Canada physical wooden family crossword /
+# Scrabble tile signs: CA$25-102, wooden wall pieces CA$52-82, shadow
+# box versions to CA$102): set at or above the market midpoint. Final
+# quote depends on size/design.
+WORD_TILES = [
+    ("assets/word-tiles/family-word-tile-studio.jpg", "Family word tile wall display, small, up to 10 words", "Laser-cut · CO2 / Diode", "From $65"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Family word tile wall display, medium, up to 15 words", "Laser-cut · CO2 / Diode", "From $85"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Family word tile wall display, large, up to 20 words", "Laser-cut · CO2 / Diode", "From $115"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Wedding keepsake word tile set", "Laser-cut · CO2 / Diode", "From $95"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Tabletop word tile sign", "Laser-cut · CO2 / Diode", "From $55"),
+    ("assets/crystal/crystal-coming-soon.jpg", "UV-printed word tile set, acrylic panel", "UV print · eufyMake E1", "From $75"),
+]
+
+WORD_TILES_HTML = """
+<section id="word-tiles">
+  <div class="wrap">
+    <div class="eyebrow">Family Word Tiles</div>
+    <h2 class="sec">Your family, in tiles</h2>
+    <p class="sub">Your family names and the words that mean something, arranged into one connected crossword layout, where matching letters cross and share a tile. We laser-cut and engrave each tile in wood, plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo), or UV-print the whole layout onto an acrylic panel on our eufyMake E1. You pick the words, the tile size, the letter style, and point numbers on or off. A backing board, frame or stand is extra unless the listing says it is included. The photo below is Atomm's own sample of the design, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Family word tile displays</h3>
+    <p class="work-note">Up to 20 words per layout, every word included, letters in Classic Bold, Traditional Serif or Typewriter, with Scrabble-style point numbers on or off.</p>
+    <div class="work-grid">
+      """ + _work_tiles(WORD_TILES) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_WORDTILES%%">Ask About a Word Tile Display on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -641,10 +688,12 @@ out = (HTML
        .replace("%%CRYSTAL_3D%%", CRYSTAL_3D)
        .replace("%%ZODIAC%%", ZODIAC)
        .replace("%%MUSIC_FRAMES%%", MUSIC_FRAMES)
+       .replace("%%WORD_TILES%%", WORD_TILES_HTML)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_CRYSTAL%%", orders["crystal"])
        .replace("%%WA_ZODIAC%%", orders["zodiac"])
        .replace("%%WA_MUSIC%%", orders["music"])
+       .replace("%%WA_WORDTILES%%", orders["wordtiles"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
