@@ -49,6 +49,7 @@ orders = {
     "3dprint": wa("Hi JakinsCraft! I'm interested in custom 3D printing. Here's what I need:"),
     "laser": wa("Hi JakinsCraft! I'm interested in laser engraving. Here's what I need:"),
     "crystal": wa("Hi JakinsCraft! I'm interested in a 3D crystal or relief keepsake. Here's what I need:"),
+    "zodiac": wa("Hi JakinsCraft! I'm interested in a zodiac birthday gift. Here's what I need:"),
     "bulk": wa("Hi JakinsCraft! I'm interested in a bulk / corporate order. Let's talk."),
     "quote": None,  # built live in JS
 }
@@ -169,7 +170,7 @@ footer .powered b{color:var(--accent)}
   <div class="nav-in">
     <a class="brand" href="#top"><img src="%%LOGO_PATH%%" alt="JakinsCraft logo"><span>Jakins<em>Craft</em></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
+      <a href="#products">Products</a><a href="#laser-work">Laser Work</a><a href="#crystal-3d">3D Crystal &amp; Relief</a><a href="#zodiac">Zodiac Birthday Gifts</a><a href="#quote">Get a Quote</a><a href="#bulk">Bulk Orders</a><a href="#gallery">Gallery</a>
     </div>
   </div>
 </nav>
@@ -248,6 +249,8 @@ footer .powered b{color:var(--accent)}
 %%LASER_WORK%%
 
 %%CRYSTAL_3D%%
+
+%%ZODIAC%%
 
 <section id="quote">
   <div class="wrap">
@@ -507,6 +510,64 @@ CRYSTAL_3D = """
   </div>
 </section>
 """
+
+# --- Zodiac Birthday Gifts section (Atomm Zodiac Signs generator) ---
+# All 12 signs as personalized birthday gifts: the recipient's sign, name
+# and birth date engraved on the piece. Relief plaques run on the X1's
+# 55W CO2 + 20W diode galvo, available now. Crystal inner engraving needs
+# the 5W UV add-on laser, which the X1 does not have yet, so those
+# products are grouped as needing the UV add-on. NEVER list crystal inner
+# engraving as available now. No Atomm sample photos were fetchable for
+# zodiac (the generator page is an interactive designer with no
+# extractable images), so the 12 sign tiles are JakinsCraft-made sign
+# tiles (gold glyph on the site's dark purple, sign name and dates), and
+# the UV forms use the honest "Photo coming soon" tile. Prices are CAD
+# starting prices from a Nov 26, 2026 market survey (Etsy Canada zodiac
+# gifts: laser-cut metal wall art ~$60, engraved acrylic plaque ~$66,
+# bas relief ~$40, 3D engraved crystal keepsake ~$88, constellation LED
+# night light ~$41-52, zodiac necklace ~$21-43): set at or above the
+# market midpoint. Final quote depends on size/design.
+ZODIAC_NOW = [
+    ("assets/zodiac/zodiac-aries.jpg", "Aries relief plaque, personalized", "2.5D relief · Mar 21 - Apr 19", "From $65"),
+    ("assets/zodiac/zodiac-taurus.jpg", "Taurus relief plaque, personalized", "2.5D relief · Apr 20 - May 20", "From $65"),
+    ("assets/zodiac/zodiac-gemini.jpg", "Gemini relief plaque, personalized", "2.5D relief · May 21 - Jun 20", "From $65"),
+    ("assets/zodiac/zodiac-cancer.jpg", "Cancer relief plaque, personalized", "2.5D relief · Jun 21 - Jul 22", "From $65"),
+    ("assets/zodiac/zodiac-leo.jpg", "Leo relief plaque, personalized", "2.5D relief · Jul 23 - Aug 22", "From $65"),
+    ("assets/zodiac/zodiac-virgo.jpg", "Virgo relief plaque, personalized", "2.5D relief · Aug 23 - Sep 22", "From $65"),
+    ("assets/zodiac/zodiac-libra.jpg", "Libra relief plaque, personalized", "2.5D relief · Sep 23 - Oct 22", "From $65"),
+    ("assets/zodiac/zodiac-scorpio.jpg", "Scorpio relief plaque, personalized", "2.5D relief · Oct 23 - Nov 21", "From $65"),
+    ("assets/zodiac/zodiac-sagittarius.jpg", "Sagittarius relief plaque, personalized", "2.5D relief · Nov 22 - Dec 21", "From $65"),
+    ("assets/zodiac/zodiac-capricorn.jpg", "Capricorn relief plaque, personalized", "2.5D relief · Dec 22 - Jan 19", "From $65"),
+    ("assets/zodiac/zodiac-aquarius.jpg", "Aquarius relief plaque, personalized", "2.5D relief · Jan 20 - Feb 18", "From $65"),
+    ("assets/zodiac/zodiac-pisces.jpg", "Pisces relief plaque, personalized", "2.5D relief · Feb 19 - Mar 20", "From $65"),
+]
+ZODIAC_UV = [
+    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac crystal block, personalized", "5W UV · Inner engraving", "From $75"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac LED night light, crystal", "5W UV · Inner engraving", "From $85"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac crystal pendant", "5W UV · Inner engraving", "From $30"),
+    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac constellation crystal ball", "5W UV · Inner engraving", "From $75"),
+]
+
+ZODIAC = """
+<section id="zodiac">
+  <div class="wrap">
+    <div class="eyebrow">Zodiac Birthday Gifts</div>
+    <h2 class="sec">Their sign, made personal</h2>
+    <p class="sub">A birthday gift with their star sign on it, personalized with their name and birth date. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave it as a 2.5D relief plaque in wood, acrylic or slate, or as a portrait floating inside crystal. Relief plaques are available now on our X1 (55W CO2 + 20W diode galvo). Crystal inner engraving needs the X1's 5W UV add-on laser, ask us about it as we expand. The sign tiles below are our own designs, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <h3 class="work-group">Available now — zodiac relief plaques</h3>
+    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name and birth date.</p>
+    <div class="work-grid">
+      """ + _work_tiles(ZODIAC_NOW) + """
+    </div>
+    <h3 class="work-group">Needs the 5W UV add-on — zodiac crystal</h3>
+    <p class="work-note">Engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
+    <div class="work-grid">
+      """ + _work_tiles(ZODIAC_UV) + """
+    </div>
+    <div class="center" style="margin-top:28px"><a class="btn btn-accent" href="%%WA_ZODIAC%%">Ask About a Zodiac Gift on WhatsApp</a></div>
+  </div>
+</section>
+"""
 out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
@@ -545,8 +606,10 @@ out = (HTML
        .replace("%%WA_3DPRINT%%", orders["3dprint"])
        .replace("%%LASER_WORK%%", LASER_WORK)
        .replace("%%CRYSTAL_3D%%", CRYSTAL_3D)
+       .replace("%%ZODIAC%%", ZODIAC)
        .replace("%%WA_LASER%%", orders["laser"])
        .replace("%%WA_CRYSTAL%%", orders["crystal"])
+       .replace("%%WA_ZODIAC%%", orders["zodiac"])
        .replace("%%WA_BULK%%", orders["bulk"]))
 
 OUT.write_text(out, encoding="utf-8")
