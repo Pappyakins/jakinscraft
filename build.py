@@ -476,25 +476,25 @@ LASER_WORK = """
 # 2026 market survey (Etsy Canada 3D crystal and wood relief listings):
 # set at or above the market midpoint. Final quote depends on size/design.
 RELIEF_NOW = [
-    ("assets/crystal/crystal-coming-soon.jpg", "Portrait relief plaque, wood", "2.5D relief · CO2 / Diode", "From $115"),
+    ("assets/crystal/crystal-portrait-relief.jpg", "Portrait relief plaque, wood", "2.5D relief · CO2 / Diode", "From $115"),
     ("assets/crystal/relief-pet-dog.jpg", "Pet portrait relief, wood", "2.5D relief · CO2 / Diode", "From $95"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Family portrait relief plaque", "2.5D relief · CO2 / Diode", "From $125"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Memorial relief plaque", "2.5D relief · CO2 / Diode", "From $110"),
+    ("assets/crystal/crystal-family-relief.jpg", "Family portrait relief plaque", "2.5D relief · CO2 / Diode", "From $125"),
+    ("assets/crystal/crystal-memorial-relief.jpg", "Memorial relief plaque", "2.5D relief · CO2 / Diode", "From $110"),
     ("assets/crystal/relief-stone-eye.jpg", "Stone relief art plaque", "2.5D relief · CO2 / Diode", "From $85"),
     ("assets/crystal/relief-wildlife-giraffe.jpg", "Wildlife relief plaque, stone", "2.5D relief · CO2 / Diode", "From $85"),
     ("assets/crystal/relief-slate-eye.jpg", "Slate relief plaque", "2.5D relief · CO2 / Diode", "From $55"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Acrylic edge-lit relief panel", "2.5D relief · CO2 / Diode", "From $65"),
+    ("assets/crystal/crystal-acrylic-edge-lit.jpg", "Acrylic edge-lit relief panel", "2.5D relief · CO2 / Diode", "From $65"),
     ("assets/crystal/relief-animal-giraffe.jpg", "Animal portrait relief, stone", "2.5D relief · CO2 / Diode", "From $85"),
     ("assets/crystal/crystal-coming-soon.jpg", "3D house ornament, reindeer", "Laser-cut · CO2 / Diode", "From $20"),
 ]
 CRYSTAL_UV = [
     ("assets/crystal/crystal-portrait-block.jpg", "Crystal photo block, portrait", "5W UV · Inner engraving", "From $65"),
     ("assets/crystal/crystal-wedding-block.jpg", "Couple portrait crystal block", "5W UV · Inner engraving", "From $75"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Crystal photo block with music code", "5W UV · Inner engraving", "From $75"),
+    ("assets/crystal/crystal-music-code-block.jpg", "Crystal photo block with music code", "5W UV · Inner engraving", "From $75"),
     ("assets/crystal/crystal-jellyfish-cube.jpg", "Crystal art cube", "5W UV · Inner engraving", "From $70"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Crystal keychain, name pendant", "5W UV · Inner engraving", "From $25"),
+    ("assets/crystal/crystal-keychain-pendant.jpg", "Crystal keychain, name pendant", "5W UV · Inner engraving", "From $25"),
     ("assets/crystal/crystal-led-family.jpg", "LED night light, portrait block", "5W UV · Inner engraving", "From $85"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Heart keepsake, portrait", "5W UV · Inner engraving", "From $55"),
+    ("assets/crystal/crystal-heart-keepsake.jpg", "Heart keepsake, portrait", "5W UV · Inner engraving", "From $55"),
     ("assets/crystal/crystal-pug-cube.jpg", "Pet memorial crystal cube", "5W UV · Inner engraving", "From $65"),
     ("assets/crystal/crystal-galaxy-ball.jpg", "Crystal ball, galaxy", "5W UV · Inner engraving", "From $75"),
     ("assets/crystal/crystal-eiffel-block.jpg", "Landmark crystal block", "5W UV · Inner engraving", "From $65"),
@@ -548,10 +548,10 @@ ZODIAC_NOW = [
     ("assets/zodiac/zodiac-pisces.jpg", "Pisces relief plaque, personalized", "2.5D relief · Feb 19 - Mar 20", "From $65"),
 ]
 ZODIAC_UV = [
-    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac crystal block, personalized", "5W UV · Inner engraving", "From $75"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac LED night light, crystal", "5W UV · Inner engraving", "From $85"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac crystal pendant", "5W UV · Inner engraving", "From $30"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Zodiac constellation crystal ball", "5W UV · Inner engraving", "From $75"),
+    ("assets/zodiac/zodiac-crystal-block.jpg", "Zodiac crystal block, personalized", "5W UV · Inner engraving", "From $75"),
+    ("assets/zodiac/zodiac-led-night-light.jpg", "Zodiac LED night light, crystal", "5W UV · Inner engraving", "From $85"),
+    ("assets/zodiac/zodiac-crystal-pendant.jpg", "Zodiac crystal pendant", "5W UV · Inner engraving", "From $30"),
+    ("assets/zodiac/zodiac-constellation-ball.jpg", "Zodiac constellation crystal ball", "5W UV · Inner engraving", "From $75"),
 ]
 
 ZODIAC = """
@@ -561,7 +561,7 @@ ZODIAC = """
     <h2 class="sec">Their sign, made personal</h2>
     <p class="sub">A birthday gift with their star sign on it, personalized with their name and their constellation chart, mapped from their birth date, time and place. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave the chart as a 2.5D relief plaque in wood, acrylic or slate, a rectangular acrylic plaque, a circular light sign or a laser-cut ornament, or inside crystal as a cube or a glass sphere on a wooden LED base. Relief plaques run on our X1 (55W CO2 + 20W diode galvo), crystal pieces on our UV laser. The sign tiles below are our own designs, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Zodiac relief plaques &amp; crystal</h3>
-    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name, birth date, time and place, so the star chart is theirs, not just their sign. Crystal pieces are engraved inside clear K9/K5 crystal with the UV laser, a crystal cube or a glass sphere on a wooden LED base, nothing printed on top and nothing wears off.</p>
+    <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name, birth date, time and place, so the star chart is theirs, not just their sign. Crystal pieces are engraved inside clear K9/K5 crystal with the UV laser, a crystal cube or a glass sphere on a wooden LED base, nothing printed on top and nothing wears off. Crystal photos are Atomm's samples.</p>
     <div class="work-grid">
       """ + _work_tiles(ZODIAC_NOW + ZODIAC_UV) + """
     </div>
@@ -581,18 +581,16 @@ ZODIAC = """
 # Relief section already has a "Crystal photo block with music code"
 # in the crystal section, that is a
 # different product (crystal inner engraving), do not duplicate or remove
-# it. No Atomm sample photos were fetchable for this tool (the page is a
-# community generator with no extractable images), so all tiles use the
-# honest "Photo coming soon" tile. Prices are CAD starting prices from a
+# it. Sample photos found Nov 27, 2026 on the generator page (gallery cover, Perfect frame, three frames on stands); all four tiles now use real Atomm samples. Prices are CAD starting prices from a
 # Nov 26, 2026 market survey (Etsy Canada personalized music plaques and
 # photo frames: acrylic song plaques CA$24-46, wooden-stand plaques
 # CA$34-60, LED night light plaques CA$19-37): set at or above the
 # market midpoint. Final quote depends on size/design.
 MUSIC_NOW = [
-    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame, 5x7 in", "Laser-cut · CO2 / Diode", "From $45"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame, 8x10 in", "Laser-cut · CO2 / Diode", "From $55"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame with display stand", "Laser-cut · CO2 / Diode", "From $55"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Music photo frame with engraved heart", "Laser-cut · CO2 / Diode", "From $50"),
+    ("assets/music-frames/music-frame-standard.jpg", "Music photo frame, standard size (140 x 220 mm)", "Laser-cut · CO2 / Diode", "From $45"),
+    ("assets/music-frames/music-frame-large.jpg", "Music photo frame, custom size", "Laser-cut · CO2 / Diode", "From $55"),
+    ("assets/music-frames/music-frame-stand.jpg", "Music photo frame with display stand", "Laser-cut · CO2 / Diode", "From $55"),
+    ("assets/music-frames/music-frame-heart.jpg", "Music photo frame with engraved heart", "Laser-cut · CO2 / Diode", "From $50"),
 ]
 
 MUSIC_FRAMES = """
@@ -600,7 +598,7 @@ MUSIC_FRAMES = """
   <div class="wrap">
     <div class="eyebrow">Music Photo Frames</div>
     <h2 class="sec">Your song, in a frame</h2>
-    <p class="sub">Your favourite photo and your song, built into a layered laser-cut frame: a front with a photo window, a spacer with a photo pocket, and a back with a finger notch, so the photo slides in and out. We engrave the song title, artist and play time, and your scannable Spotify code, so a phone scan plays the song. You supply your own Spotify code, made free in the Spotify app, and your photo. Available now on our X1 (55W CO2 + 20W diode galvo), in wood or acrylic. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Your favourite photo and your song, built into a layered laser-cut frame: a front with a photo window, a spacer with a photo pocket, and a back with a finger notch, so the photo slides in and out. We engrave the song title, artist and play time, and your scannable Spotify code, so a phone scan plays the song. You supply your own Spotify code, made free in the Spotify app, and your photo. Available now on our X1 (55W CO2 + 20W diode galvo), in wood or acrylic. Frames are sized in millimetres, standard 140 x 220 mm. Photos are Atomm's samples of the finished frames. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Available now — laser-cut music frames</h3>
     <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers, three layers for real 3D depth.</p>
     <div class="work-grid">
@@ -624,19 +622,18 @@ MUSIC_FRAMES = """
 # stand is extra unless the listing says it is included; the tool does
 # not supply backing-board cut files, frames or stands. The one real
 # photo is Atomm's own Family Word Tile Studio sample (assets/word-
-# tiles/family-word-tile-studio.jpg); the rest use the honest "Photo
-# coming soon" tile. Prices are CAD starting prices from a Nov 26, 2026
+# tiles/family-word-tile-studio.jpg); the medium tile is a real engraved board photo, the other four are JakinsCraft design previews. Prices are CAD starting prices from a Nov 26, 2026
 # market survey (Etsy Canada physical wooden family crossword /
 # Scrabble tile signs: CA$25-102, wooden wall pieces CA$52-82, shadow
 # box versions to CA$102): set at or above the market midpoint. Final
 # quote depends on size/design.
 WORD_TILES = [
     ("assets/word-tiles/family-word-tile-studio.jpg", "Family word tile wall display, small, up to 10 words", "Laser-cut · CO2 / Diode", "From $65"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Family word tile wall display, medium, up to 15 words", "Laser-cut · CO2 / Diode", "From $85"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Family word tile wall display, large, up to 20 words", "Laser-cut · CO2 / Diode", "From $115"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Wedding keepsake word tile set", "Laser-cut · CO2 / Diode", "From $95"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Tabletop word tile sign", "Laser-cut · CO2 / Diode", "From $55"),
-    ("assets/crystal/crystal-coming-soon.jpg", "UV-printed word tile set, acrylic panel", "UV print · eufyMake E1", "From $75"),
+    ("assets/word-tiles/word-tile-medium.jpg", "Family word tile wall display, medium, up to 15 words", "Laser-cut · CO2 / Diode", "From $85"),
+    ("assets/word-tiles/word-tile-large.jpg", "Family word tile wall display, large, up to 20 words", "Laser-cut · CO2 / Diode", "From $115"),
+    ("assets/word-tiles/word-tile-wedding.jpg", "Wedding keepsake word tile set", "Laser-cut · CO2 / Diode", "From $95"),
+    ("assets/word-tiles/word-tile-tabletop.jpg", "Tabletop word tile sign", "Laser-cut · CO2 / Diode", "From $55"),
+    ("assets/word-tiles/word-tile-uv-acrylic.jpg", "UV-printed word tile set, acrylic panel", "UV print · eufyMake E1", "From $75"),
 ]
 
 WORD_TILES_HTML = """
@@ -644,7 +641,7 @@ WORD_TILES_HTML = """
   <div class="wrap">
     <div class="eyebrow">Family Word Tiles</div>
     <h2 class="sec">Your family, in tiles</h2>
-    <p class="sub">Your family names and the words that mean something, arranged into one connected crossword layout, where matching letters cross and share a tile. We laser-cut and engrave each tile in wood, plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo), or UV-print the whole layout onto an acrylic panel on our eufyMake E1. You pick the words, the tile size, the letter style, and point numbers on or off. A backing board, frame or stand is extra unless the listing says it is included. The photo below is Atomm's own sample of the design, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Your family names and the words that mean something, arranged into one connected crossword layout, where matching letters cross and share a tile. We laser-cut and engrave each tile in wood, plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo), or UV-print the whole layout onto an acrylic panel on our eufyMake E1. You pick the words, the tile size, the letter style, and point numbers on or off. A backing board, frame or stand is extra unless the listing says it is included. Photos are Atomm's samples and JakinsCraft design previews. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Family word tile displays</h3>
     <p class="work-note">Up to 20 words per layout, every word included, letters in Classic Bold, Traditional Serif or Typewriter, with Scrabble-style point numbers on or off.</p>
     <div class="work-grid">
@@ -673,17 +670,16 @@ WORD_TILES_HTML = """
 # 2026, all products are listed as available, assume he has the kit
 # it takes to make them, no availability split. The one real photo is
 # Atomm's own photo-block sample (assets/baby-blocks/baby-photo-
-# block-sample.jpg); the rest use the honest "Photo coming soon"
-# tile. Prices are CAD starting prices from a Nov 26, 2026 market
+# block-sample.jpg); the other three use Atomm template crops and a composite. Prices are CAD starting prices from a Nov 26, 2026 market
 # survey (Etsy Canada personalized baby birth blocks CA$26-56,
 # birth announcement plaques CA$32-72, framed stats plaques to
 # CA$72): set at or above the market midpoint. Final quote depends
 # on size/design. Buyer supplies the baby photo and birth details.
 BABY_BLOCKS = [
     ("assets/baby-blocks/baby-photo-block-sample.jpg", "Baby photo block, UV-printed, clear acrylic", "UV print · eufyMake E1", "From $65"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Baby photo block, laser-engraved, wood or acrylic", "Laser engrave · CO2 / Diode", "From $55"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Baby photo block with raised mirror name", "Mirror acrylic name · Laser-cut", "From $75"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Baby photo block set, twins or siblings, two blocks", "UV print or laser engrave", "From $95"),
+    ("assets/baby-blocks/baby-block-engraved.jpg", "Baby photo block, laser-engraved, wood or acrylic", "Laser engrave · CO2 / Diode", "From $55"),
+    ("assets/baby-blocks/baby-block-raised-name.jpg", "Baby photo block with raised mirror name", "Mirror acrylic name · Laser-cut", "From $75"),
+    ("assets/baby-blocks/baby-block-set-two.jpg", "Baby photo block set, twins or siblings, two blocks", "UV print or laser engrave", "From $95"),
 ]
 
 BABY_BLOCKS_HTML = """
@@ -691,7 +687,7 @@ BABY_BLOCKS_HTML = """
   <div class="wrap">
     <div class="eyebrow">Baby Photo Blocks</div>
     <h2 class="sec">Welcome, little one</h2>
-    <p class="sub">Your baby's photo, name and birth details on a block that stands on the shelf, in one of 7 shapes: rectangle, arch, oval, round, scalloped, cloud or heart. We UV-print it in full color on clear acrylic on our eufyMake E1, or laser-engrave it in greys into birch, walnut, black or clear acrylic on our X1 (55W CO2 + 20W diode galvo). Every block comes with its stand, a slot base with an engraved line in front or two slot-on feet, and an optional raised name in gold, silver or rose gold mirror acrylic. You supply the photo and the birth details, name, date, time, weight, length and hospital, and pick from 12 templates, 3 layouts, 8 color themes, 8 artworks and 12 fonts. The photo below is Atomm's own sample of the design, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Your baby's photo, name and birth details on a block that stands on the shelf, in one of 7 shapes: rectangle, arch, oval, round, scalloped, cloud or heart. We UV-print it in full color on clear acrylic on our eufyMake E1, or laser-engrave it in greys into birch, walnut, black or clear acrylic on our X1 (55W CO2 + 20W diode galvo). Every block comes with its stand, a slot base with an engraved line in front or two slot-on feet, and an optional raised name in gold, silver or rose gold mirror acrylic. You supply the photo and the birth details, name, date, time, weight, length and hospital, and pick from 12 templates, 3 layouts, 8 color themes, 8 artworks and 12 fonts. Photos are Atomm's samples of the finished blocks. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Baby photo blocks</h3>
     <p class="work-note">Stand included with every block. Raised name layer in mirror acrylic, 2-3 mm thick.</p>
     <div class="work-grid">
