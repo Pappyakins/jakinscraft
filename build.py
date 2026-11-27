@@ -726,13 +726,13 @@ BABY_BLOCKS_HTML = """
 # midpoint for a finished personalized box. Final quote depends on
 # size/design.
 GIFT_CARD_BOXES = [
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Birthday", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Christmas Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Father's Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Mother's Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Wedding Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $25"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, Wedding Day 2", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $25"),
-    ("assets/crystal/crystal-coming-soon.jpg", "Gift card holder box, custom occasion", "Laser-cut · Your text and elements", "From $25"),
+    ("assets/gift-card/gift-card-birthday.jpg", "Gift card holder box, Birthday", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/gift-card/gift-card-christmas.jpg", "Gift card holder box, Christmas Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/gift-card/gift-card-fathers-day.jpg", "Gift card holder box, Father's Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/gift-card/gift-card-mothers-day.jpg", "Gift card holder box, Mother's Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $20"),
+    ("assets/gift-card/gift-card-wedding.jpg", "Gift card holder box, Wedding Day", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $25"),
+    ("assets/gift-card/gift-card-wedding-2.jpg", "Gift card holder box, Wedding Day 2", "Laser-cut · 3 mm plywood / MDF / acrylic", "From $25"),
+    ("assets/gift-card/gift-card-drawer-open.jpg", "Gift card holder box, custom occasion", "Laser-cut · Your text and elements", "From $25"),
 ]
 
 GIFT_CARD_HTML = """
@@ -740,7 +740,7 @@ GIFT_CARD_HTML = """
   <div class="wrap">
     <div class="eyebrow">Gift Card Boxes</div>
     <h2 class="sec">A gift card, worth opening</h2>
-    <p class="sub">A gift card deserves better than an envelope. This is a rigid laser-cut holder box, a glued sleeve with a sliding inner drawer that holds a standard gift or credit card (85.5 x 54 mm), with an engraved front and a knob that rides in a slot. Box size 102 x 65 x 20 mm, cut from 3 mm plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo). Pick one of 6 occasion designs, Birthday, Christmas Day, Father's Day, Mother's Day, Wedding Day or Wedding Day 2, or your own custom text and decorations from 35 fonts and the Christmas, Halloween, Wedding, Flora and Fauna, Stars and Moon and New Year Party elements. You supply the message, name, occasion and material, the gift card itself is not included. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">A gift card deserves better than an envelope. This is a rigid laser-cut holder box, a glued sleeve with a sliding inner drawer that holds a standard gift or credit card (85.5 x 54 mm), with an engraved front and a knob that rides in a slot. Box size 102 x 65 x 20 mm, cut from 3 mm plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo). Pick one of 6 occasion designs, Birthday, Christmas Day, Father's Day, Mother's Day, Wedding Day or Wedding Day 2, or your own custom text and decorations from 35 fonts and the Christmas, Halloween, Wedding, Flora and Fauna, Stars and Moon and New Year Party elements. You supply the message, name, occasion and material, the gift card itself is not included. Photos are Atomm's samples of the finished boxes. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Gift card holder boxes</h3>
     <p class="work-note">Sliding-lid drawer box, engraved front, knob in slot. One SVG export, every part laid out flat, ready to cut.</p>
     <div class="work-grid">
