@@ -485,7 +485,7 @@ RELIEF_NOW = [
     ("assets/crystal/relief-slate-eye.jpg", "Slate relief plaque", "2.5D relief · CO2 / Diode", "From $55"),
     ("assets/crystal/crystal-acrylic-edge-lit.jpg", "Acrylic edge-lit relief panel", "2.5D relief · CO2 / Diode", "From $65"),
     ("assets/crystal/relief-animal-giraffe.jpg", "Animal portrait relief, stone", "2.5D relief · CO2 / Diode", "From $85"),
-    ("assets/crystal/crystal-coming-soon.jpg", "3D house ornament, reindeer", "Laser-cut · CO2 / Diode", "From $20"),
+    ("assets/crystal/house-ornament-reindeer.jpg", "3D house ornament, reindeer", "Laser-cut · CO2 / Diode", "From $20"),
 ]
 CRYSTAL_UV = [
     ("assets/crystal/crystal-portrait-block.jpg", "Crystal photo block, portrait", "5W UV · Inner engraving", "From $65"),
