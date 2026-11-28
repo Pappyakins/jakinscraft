@@ -26,22 +26,22 @@ def split_2x2(src, names):
         im.crop(box).save(S / name, quality=92)
         print(f"{name}: {box}")
 
-split_2x2("x1-wood.jpg", ["x1-wood-cat.jpg", "x1-wood-dollhouse.jpg",
-                          "x1-wood-mountain.jpg", "x1-wood-relief.jpg"])
-split_2x2("x1-acrylic.jpg", ["x1-acrylic-motorcycle.jpg", "x1-acrylic-anderson.jpg",
-                             "x1-acrylic-wedding.jpg", "x1-acrylic-earrings.jpg"])
-split_2x2("x1-metal.jpg", ["x1-metal-sf-plaque.jpg", "x1-metal-zebra.jpg",
-                           "x1-metal-tags.jpg", "x1-metal-mountain.jpg"])
-split_2x2("x1-glass.jpg", ["x1-glass-wine.jpg", "x1-glass-award.jpg",
-                           "x1-glass-tajmahal.jpg", "x1-glass-cameo.jpg"])
+split_2x2("wood.jpg", ["wood-cat.jpg", "wood-dollhouse.jpg",
+                          "wood-mountain.jpg", "wood-relief.jpg"])
+split_2x2("acrylic.jpg", ["acrylic-motorcycle.jpg", "acrylic-anderson.jpg",
+                             "acrylic-wedding.jpg", "acrylic-earrings.jpg"])
+split_2x2("metal.jpg", ["metal-sf-plaque.jpg", "metal-zebra.jpg",
+                           "metal-tags.jpg", "metal-mountain.jpg"])
+split_2x2("glass.jpg", ["glass-wine.jpg", "glass-award.jpg",
+                           "glass-tajmahal.jpg", "glass-cameo.jpg"])
 
-im = Image.open(S / "x1-more-materials.jpg")
+im = Image.open(S / "more-materials.jpg")
 w, h = im.size
 tw, th = w // 5, h // 2
-names = ["x1-mm-leather.jpg", "x1-mm-stone.jpg", "x1-mm-ceramic.jpg",
-         "x1-mm-plastic.jpg", "x1-mm-silicone.jpg", "x1-mm-denim.jpg",
-         "x1-mm-pearl.jpg", "x1-mm-paper.jpg", "x1-mm-rubber.jpg",
-         "x1-mm-pcb.jpg"]
+names = ["mm-leather.jpg", "mm-stone.jpg", "mm-ceramic.jpg",
+         "mm-plastic.jpg", "mm-silicone.jpg", "mm-denim.jpg",
+         "mm-pearl.jpg", "mm-paper.jpg", "mm-rubber.jpg",
+         "mm-pcb.jpg"]
 for i, name in enumerate(names):
     col, row = i % 5, i // 5
     im.crop((col * tw, row * th, (col + 1) * tw, (row + 1) * th)).save(S / name, quality=92)

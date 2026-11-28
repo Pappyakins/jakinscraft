@@ -7,7 +7,7 @@ WHATSAPP_NUMBER = "14378552210"   # Pappy's real WhatsApp number (digits only, w
 LOGO_PATH = "assets/logo.png?v=3"     # drop the real logo file here later; no code changes needed
 IMG_E1 = "assets/machine-e1.jpg"    # eufyMake E1 UV printer -> UV printing / tumbler card
 IMG_P1S = "assets/machine-p1s.jpg"  # Bambu Lab P1S -> Custom 3D Printing card
-IMG_F2 = "assets/machine-f2.jpg"    # xTool F2 laser engraver -> Laser Engraving card
+IMG_LASER = "assets/samples/wood-dollhouse.jpg"    # Wooden dollhouse -> Laser Engraving card
 IMG_PENDANT = "assets/fb/nfc-pendant.jpg"    # Facebook listing photo -> NFC pendant card
 IMG_KEYCHAIN = "assets/fb/nfc-keychain.jpg"  # Facebook listing photo -> QR keychain card
 IMG_PLATE_CARD = "assets/fb/nfc-plate-card.jpg"  # Facebook listing photo -> Ontario plate NFC card
@@ -93,9 +93,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.92);backdrop-filt
 .brand img{width:38px;height:38px;border-radius:10px}
 .brand span{font-family:'Playfair Display',serif;font-size:1.25rem;letter-spacing:.02em}
 .brand span em{color:var(--accent);font-style:normal}
-.nav-links{display:flex;flex:1 1 100%;justify-content:center;flex-wrap:wrap;gap:6px 18px;font-size:.9rem}
-.nav-links a{text-decoration:none;color:var(--muted);white-space:nowrap}
-.nav-links a:hover{color:var(--accent)}
+.nav-links{display:flex;flex:1 1 100%;justify-content:center;flex-wrap:wrap;gap:10px 12px;font-size:.9rem}
+.nav-links a{text-decoration:none;color:var(--muted);white-space:nowrap;padding:6px 14px;border-radius:999px;border:1px solid rgba(168,85,247,.25);background:rgba(168,85,247,.07);transition:background .15s ease,color .15s ease,border-color .15s ease}
+.nav-links a:hover{color:#fff;background:rgba(168,85,247,.3);border-color:rgba(168,85,247,.6)}
 @media(max-width:640px){.nav-links{display:none}}
 /* hero */
 .hero{position:relative;text-align:center;padding:96px 0 80px;overflow:hidden}
@@ -241,9 +241,9 @@ footer .powered b{color:var(--accent)}
         <a class="btn-wa" href="%%WA_3DPRINT%%">Order on WhatsApp</a>
       </div>
       <div class="card">
-        <img class="machine-photo" src="%%IMG_F2%%" alt="xTool F2 laser engraver" loading="lazy">
+        <img class="machine-photo" src="%%IMG_LASER%%" alt="Wooden dollhouse" loading="lazy">
         <h3>Laser <em>Engraving</em></h3>
-        <p>Precision engraving and cutting with our xTool X1 (55W CO2 + 20W diode galvo) and xTool F2 — crisp logos and text on wood, metal, acrylic, leather, glass, tumblers and more. Perfect for gifts, signage, and branded gear.</p>
+        <p>Precision laser engraving and cutting, crisp logos and text on wood, metal, acrylic, leather, glass, tumblers and more. Perfect for gifts, signage, and branded gear.</p>
         <div class="price">Custom quote<small>Tell us your design &amp; quantity</small></div>
         <a class="btn-wa" href="%%WA_LASER%%">Order on WhatsApp</a>
       </div>
@@ -287,7 +287,7 @@ footer .powered b{color:var(--accent)}
             <option>Custom QR Keychain</option>
             <option>Custom 3D Printing</option>
             <option>Laser Engraving</option>
-            <option>Laser Cutting (X1)</option>
+            <option>Laser Cutting</option>
             <option>Bulk / Corporate Order</option>
           </select>
         </div>
@@ -392,41 +392,41 @@ document.getElementById("q-send").addEventListener("auxclick", function (e) { e.
 # Toronto market midpoint, blanks run a few dollars, so margins are
 # strong. Final quote depends on size and design.
 X1_NOW = [
-    ("assets/samples/x1-wood-dollhouse.jpg", "Wooden dollhouse", "55W CO2 · Powerful cutting", "From $85"),
-    ("assets/samples/x1-wood-mountain.jpg", "Layered mountain wood art", "55W CO2 · Powerful cutting", "From $65"),
-    ("assets/samples/x1-acrylic-motorcycle.jpg", "Clear acrylic motorcycle model", "55W CO2 · Clear acrylic cutting", "From $55"),
-    ("assets/samples/x1-acrylic-wedding.jpg", "Olivia and James wedding sign", "55W CO2 · Cutting and engraving", "From $65"),
-    ("assets/samples/x1-glass-award.jpg", "The Legacy Award glass plaque", "55W CO2 · Surface engraving", "From $55"),
-    ("assets/samples/x1-mm-leather.jpg", "Leather cap patch", "CO2 / Diode", "From $12"),
-    ("assets/samples/x1-mm-stone.jpg", "Slate coasters", "Diode", "From $12 each"),
-    ("assets/samples/x1-mm-silicone.jpg", "Silicone phone cases", "Diode", "From $25"),
-    ("assets/samples/x1-mm-denim.jpg", "Denim jeans", "CO2 / Diode", "From $30"),
-    ("assets/samples/x1-mm-paper.jpg", "Paper anniversary card", "CO2 / Diode", "From $15"),
-    ("assets/samples/x1-mm-rubber.jpg", "Rubber stamps", "Diode", "From $20"),
-    ("assets/samples/x1-door-sign.jpg", "Wooden door sign", "xTool X1", "From $45"),
-    ("assets/samples/x1-tumbler.jpg", "Personalized tumbler", "xTool X1", "From $35"),
-    ("assets/samples/x1-glass-ornament.jpg", "Glass ornament", "xTool X1", "From $20"),
+    ("assets/samples/wood-dollhouse.jpg", "Wooden dollhouse", "55W CO2 · Powerful cutting", "From $85"),
+    ("assets/samples/wood-mountain.jpg", "Layered mountain wood art", "55W CO2 · Powerful cutting", "From $65"),
+    ("assets/samples/acrylic-motorcycle.jpg", "Clear acrylic motorcycle model", "55W CO2 · Clear acrylic cutting", "From $55"),
+    ("assets/samples/acrylic-wedding.jpg", "Olivia and James wedding sign", "55W CO2 · Cutting and engraving", "From $65"),
+    ("assets/samples/glass-award.jpg", "The Legacy Award glass plaque", "55W CO2 · Surface engraving", "From $55"),
+    ("assets/samples/mm-leather.jpg", "Leather cap patch", "CO2 / Diode", "From $12"),
+    ("assets/samples/mm-stone.jpg", "Slate coasters", "Diode", "From $12 each"),
+    ("assets/samples/mm-silicone.jpg", "Silicone phone cases", "Diode", "From $25"),
+    ("assets/samples/mm-denim.jpg", "Denim jeans", "CO2 / Diode", "From $30"),
+    ("assets/samples/mm-paper.jpg", "Paper anniversary card", "CO2 / Diode", "From $15"),
+    ("assets/samples/mm-rubber.jpg", "Rubber stamps", "Diode", "From $20"),
+    ("assets/samples/door-sign.jpg", "Wooden door sign", "CO2 · Cutting and engraving", "From $45"),
+    ("assets/samples/tumbler.jpg", "Personalized tumbler", "Laser engraving", "From $35"),
+    ("assets/samples/glass-ornament.jpg", "Glass ornament", "Surface engraving", "From $20"),
 ]
 X1_ADDON = [
-    ("assets/samples/x1-wood-cat.jpg", "Framed cat portrait", "5W UV · High-detail engraving", "From $75"),
-    ("assets/samples/x1-wood-relief.jpg", "Wood relief carving", "5W UV · Char-free relief", "From $95"),
-    ("assets/samples/x1-acrylic-anderson.jpg", "Green acrylic Anderson card", "5W UV · Fine engraving", "From $25"),
-    ("assets/samples/x1-acrylic-earrings.jpg", "Acrylic earrings", "55W CO2 + 5W UV", "From $25"),
-    ("assets/samples/x1-glass-wine.jpg", "Wine glass, rotary engraving", "5W UV · Fine rotary engraving", "From $30"),
-    ("assets/samples/x1-glass-tajmahal.jpg", "Taj Mahal crystal block", "5W UV · Inner engraving", "From $85"),
-    ("assets/samples/x1-glass-cameo.jpg", "Glass cameo pendant", "5W UV · Relief and cutting", "From $30"),
-    ("assets/samples/x1-metal-sf-plaque.jpg", "San Francisco gold plaque", "60W MOPA · Metal embossing", "From $95"),
-    ("assets/samples/x1-metal-zebra.jpg", "Colour zebra art", "60W MOPA · Metal colour engraving", "From $85"),
-    ("assets/samples/x1-metal-tags.jpg", "Alpencore metal tags", "30W Fiber · Batch metal marking", "From $10 each"),
-    ("assets/samples/x1-metal-mountain.jpg", "Oval metal mountain", "60W MOPA · Thin metal cutting", "From $65"),
-    ("assets/samples/x1-mm-ceramic.jpg", "Ceramic Starry Night plate", "UV / Fiber / MOPA", "From $45"),
-    ("assets/samples/x1-mm-plastic.jpg", "Plastic AirPods case", "UV / MOPA", "From $25"),
-    ("assets/samples/x1-mm-pearl.jpg", "Mother-of-pearl pendant", "5W UV", "From $45"),
-    ("assets/samples/x1-mm-pcb.jpg", "PCB circuit board", "UV / MOPA / Fiber", "From $40"),
+    ("assets/samples/wood-cat.jpg", "Framed cat portrait", "5W UV · High-detail engraving", "From $75"),
+    ("assets/samples/wood-relief.jpg", "Wood relief carving", "5W UV · Char-free relief", "From $95"),
+    ("assets/samples/acrylic-anderson.jpg", "Green acrylic Anderson card", "5W UV · Fine engraving", "From $25"),
+    ("assets/samples/acrylic-earrings.jpg", "Acrylic earrings", "55W CO2 + 5W UV", "From $25"),
+    ("assets/samples/glass-wine.jpg", "Wine glass, rotary engraving", "5W UV · Fine rotary engraving", "From $30"),
+    ("assets/samples/glass-tajmahal.jpg", "Taj Mahal crystal block", "5W UV · Inner engraving", "From $85"),
+    ("assets/samples/glass-cameo.jpg", "Glass cameo pendant", "5W UV · Relief and cutting", "From $30"),
+    ("assets/samples/metal-sf-plaque.jpg", "San Francisco gold plaque", "60W MOPA · Metal embossing", "From $95"),
+    ("assets/samples/metal-zebra.jpg", "Colour zebra art", "60W MOPA · Metal colour engraving", "From $85"),
+    ("assets/samples/metal-tags.jpg", "Alpencore metal tags", "30W Fiber · Batch metal marking", "From $10 each"),
+    ("assets/samples/metal-mountain.jpg", "Oval metal mountain", "60W MOPA · Thin metal cutting", "From $65"),
+    ("assets/samples/mm-ceramic.jpg", "Ceramic Starry Night plate", "UV / Fiber / MOPA", "From $45"),
+    ("assets/samples/mm-plastic.jpg", "Plastic AirPods case", "UV / MOPA", "From $25"),
+    ("assets/samples/mm-pearl.jpg", "Mother-of-pearl pendant", "5W UV", "From $45"),
+    ("assets/samples/mm-pcb.jpg", "PCB circuit board", "UV / MOPA / Fiber", "From $40"),
 ]
 F2_WORK = [
-    ("assets/samples/f2-ir.jpg", "5W infrared: colour metal tags, tumblers, rings, knives, pendants", "5W IR · Metals and plastics", "From $10", True),
-    ("assets/samples/f2-diode.jpg", "15W diode: slate, denim, wood, glass, leather, paper, acrylic", "15W Diode · Everyday materials", "From $12", True),
+    ("assets/samples/infrared-panel.jpg", "Colour metal tags, tumblers, rings, knives, pendants", "5W IR · Metals and plastics", "From $10", True),
+    ("assets/samples/diode-panel.jpg", "Slate, denim, wood, glass, leather, paper, acrylic", "15W Diode · Everyday materials", "From $12", True),
 ]
 
 def _work_tiles(items):
@@ -445,20 +445,20 @@ LASER_WORK = """
 <section id="laser-work">
   <div class="wrap">
     <div class="eyebrow">Laser Work</div>
-    <h2 class="sec">What the X1 and F2 can make</h2>
+    <h2 class="sec">What we can make</h2>
     <p class="sub">Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
-    <h3 class="work-group">Made with the X1's CO2 and diode lasers</h3>
-    <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers.</p>
+    <h3 class="work-group">Laser cutting and engraving</h3>
+    <p class="work-note">Cut and engraved on wood, acrylic, glass, leather, slate, denim, paper and more.</p>
     <div class="work-grid">
       """ + _work_tiles(X1_NOW) + """
     </div>
-    <h3 class="work-group">Made with the X1's UV, MOPA and Fiber lasers</h3>
-    <p class="work-note">UV for crystal and glass, MOPA and Fiber for metal colour, embossing and marking.</p>
+    <h3 class="work-group">Fine detail and metal work</h3>
+    <p class="work-note">Fine detail on crystal and glass, colour, embossing and marking on metal.</p>
     <div class="work-grid">
       """ + _work_tiles(X1_ADDON) + """
     </div>
-    <h3 class="work-group">Made with the F2</h3>
-    <p class="work-note">5W infrared for premium metals and plastics, 15W diode for wood, acrylic, leather and more, on the go or in the shop.</p>
+    <h3 class="work-group">Everyday materials and metal marking</h3>
+    <p class="work-note">Metal tags, tumblers and rings, plus slate, denim, wood, glass, leather, paper and acrylic.</p>
     <div class="work-grid">
       """ + _work_tiles(F2_WORK) + """
     </div>
@@ -509,9 +509,9 @@ CRYSTAL_3D = """
   <div class="wrap">
     <div class="eyebrow">3D Crystal &amp; Relief</div>
     <h2 class="sec">Your photo, carved in 3D</h2>
-    <p class="sub">Send us a photo and AI turns it into a 3D model: a 2.5D relief carved into wood, acrylic or slate, a true 3D portrait floating inside crystal, or a laser-cut 3D ornament. Relief work runs on our X1 (55W CO2 + 20W diode galvo), crystal inner engraving on our UV laser. The photos below are xTool and Atomm samples of the technique, real JakinsCraft pieces coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Send us a photo and AI turns it into a 3D model: a 2.5D relief carved into wood, acrylic or slate, a true 3D portrait floating inside crystal, or a laser-cut 3D ornament. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">2.5D relief, crystal inner engraving &amp; laser-cut</h3>
-    <p class="work-note">Carved and cut with the 55W CO2 and 20W diode galvo lasers, 256 levels of grey for real depth on relief pieces. Crystal pieces are engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
+    <p class="work-note">256 levels of grey for real depth on relief pieces. Crystal pieces are engraved inside clear K9 crystal with the UV laser, nothing printed on top and nothing wears off.</p>
     <div class="work-grid">
       """ + _work_tiles(RELIEF_NOW + CRYSTAL_UV) + """
     </div>
@@ -562,7 +562,7 @@ ZODIAC = """
   <div class="wrap">
     <div class="eyebrow">Zodiac Birthday Gifts</div>
     <h2 class="sec">Their sign, made personal</h2>
-    <p class="sub">A birthday gift with their star sign on it, personalized with their name and their constellation chart, mapped from their birth date, time and place. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave the chart as a 2.5D relief plaque in wood, acrylic or slate, a rectangular acrylic plaque, a circular light sign or a laser-cut ornament, or inside crystal as a cube or a glass sphere on a wooden LED base. Relief plaques run on our X1 (55W CO2 + 20W diode galvo), crystal pieces on our UV laser. The sign tiles below are JakinsCraft sample previews of the finished crystal form, each sign's constellation chart engraved in a crystal block on a wooden LED base. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">A birthday gift with their star sign on it, personalized with their name and their constellation chart, mapped from their birth date, time and place. Pick their sign, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius or Pisces, and we engrave the chart as a 2.5D relief plaque in wood, acrylic or slate, a rectangular acrylic plaque, a circular light sign or a laser-cut ornament, or inside crystal as a cube or a glass sphere on a wooden LED base. The sign tiles below are JakinsCraft sample previews of the finished crystal form, each sign's constellation chart engraved in a crystal block on a wooden LED base. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Zodiac relief plaques &amp; crystal</h3>
     <p class="work-note">One plaque per sign, carved with the 55W CO2 and 20W diode galvo lasers, personalized with a name, birth date, time and place, so the star chart is theirs, not just their sign. Crystal pieces are engraved inside clear K9/K5 crystal with the UV laser, a crystal cube or a glass sphere on a wooden LED base, nothing printed on top and nothing wears off. The four crystal-form photos are Atomm's samples; the twelve sign tiles are JakinsCraft sample previews.</p>
     <div class="work-grid">
@@ -601,7 +601,7 @@ MUSIC_FRAMES = """
   <div class="wrap">
     <div class="eyebrow">Music Photo Frames</div>
     <h2 class="sec">Your song, in a frame</h2>
-    <p class="sub">Your favourite photo and your song, built into a layered laser-cut frame: a front with a photo window, a spacer with a photo pocket, and a back with a finger notch, so the photo slides in and out. We engrave the song title, artist and play time, and your scannable Spotify code, so a phone scan plays the song. You supply your own Spotify code, made free in the Spotify app, and your photo. Available now on our X1 (55W CO2 + 20W diode galvo), in wood or acrylic. Frames are sized in millimetres, standard 140 x 220 mm. Photos are Atomm's samples of the finished frames. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Your favourite photo and your song, built into a layered laser-cut frame: a front with a photo window, a spacer with a photo pocket, and a back with a finger notch, so the photo slides in and out. We engrave the song title, artist and play time, and your scannable Spotify code, so a phone scan plays the song. You supply your own Spotify code, made free in the Spotify app, and your photo. Available now in wood or acrylic. Frames are sized in millimetres, standard 140 x 220 mm. Photos are Atomm's samples of the finished frames. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Available now — laser-cut music frames</h3>
     <p class="work-note">Cut and engraved with the 55W CO2 and 20W diode galvo lasers, three layers for real 3D depth.</p>
     <div class="work-grid">
@@ -644,7 +644,7 @@ WORD_TILES_HTML = """
   <div class="wrap">
     <div class="eyebrow">Family Word Tiles</div>
     <h2 class="sec">Your family, in tiles</h2>
-    <p class="sub">Your family names and the words that mean something, arranged into one connected crossword layout, where matching letters cross and share a tile. We laser-cut and engrave each tile in wood, plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo), or UV-print the whole layout onto an acrylic panel on our eufyMake E1. You pick the words, the tile size, the letter style, and point numbers on or off. A backing board, frame or stand is extra unless the listing says it is included. Photos are Atomm's samples and JakinsCraft design previews. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Your family names and the words that mean something, arranged into one connected crossword layout, where matching letters cross and share a tile. We laser-cut and engrave each tile in wood, plywood, MDF or acrylic, or UV-print the whole layout onto an acrylic panel on our eufyMake E1. You pick the words, the tile size, the letter style, and point numbers on or off. A backing board, frame or stand is extra unless the listing says it is included. Photos are Atomm's samples and JakinsCraft design previews. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Family word tile displays</h3>
     <p class="work-note">Up to 20 words per layout, every word included, letters in Classic Bold, Traditional Serif or Typewriter, with Scrabble-style point numbers on or off.</p>
     <div class="work-grid">
@@ -690,7 +690,7 @@ BABY_BLOCKS_HTML = """
   <div class="wrap">
     <div class="eyebrow">Baby Photo Blocks</div>
     <h2 class="sec">Welcome, little one</h2>
-    <p class="sub">Your baby's photo, name and birth details on a block that stands on the shelf, in one of 7 shapes: rectangle, arch, oval, round, scalloped, cloud or heart. We UV-print it in full color on clear acrylic on our eufyMake E1, or laser-engrave it in greys into birch, walnut, black or clear acrylic on our X1 (55W CO2 + 20W diode galvo). Every block comes with its stand, a slot base with an engraved line in front or two slot-on feet, and an optional raised name in gold, silver or rose gold mirror acrylic. You supply the photo and the birth details, name, date, time, weight, length and hospital, and pick from 12 templates, 3 layouts, 8 color themes, 8 artworks and 12 fonts. Photos are Atomm's samples of the finished blocks. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">Your baby's photo, name and birth details on a block that stands on the shelf, in one of 7 shapes: rectangle, arch, oval, round, scalloped, cloud or heart. We UV-print it in full color on clear acrylic on our eufyMake E1, or laser-engrave it in greys into birch, walnut, black or clear acrylic. Every block comes with its stand, a slot base with an engraved line in front or two slot-on feet, and an optional raised name in gold, silver or rose gold mirror acrylic. You supply the photo and the birth details, name, date, time, weight, length and hospital, and pick from 12 templates, 3 layouts, 8 color themes, 8 artworks and 12 fonts. Photos are Atomm's samples of the finished blocks. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Baby photo blocks</h3>
     <p class="work-note">Stand included with every block. Raised name layer in mirror acrylic, 2-3 mm thick.</p>
     <div class="work-grid">
@@ -739,7 +739,7 @@ GIFT_CARD_HTML = """
   <div class="wrap">
     <div class="eyebrow">Gift Card Boxes</div>
     <h2 class="sec">A gift card, worth opening</h2>
-    <p class="sub">A gift card deserves better than an envelope. This is a rigid laser-cut holder box, a glued sleeve with a sliding inner drawer that holds a standard gift or credit card (85.5 x 54 mm), with an engraved front and a knob that rides in a slot. Box size 102 x 65 x 20 mm, cut from 3 mm plywood, MDF or acrylic on our X1 (55W CO2 + 20W diode galvo). Pick one of 6 occasion designs, Birthday, Christmas Day, Father's Day, Mother's Day, Wedding Day or Wedding Day 2, or your own custom text and decorations from 35 fonts and the Christmas, Halloween, Wedding, Flora and Fauna, Stars and Moon and New Year Party elements. You supply the message, name, occasion and material, the gift card itself is not included. Photos are Atomm's samples of the finished boxes. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">A gift card deserves better than an envelope. This is a rigid laser-cut holder box, a glued sleeve with a sliding inner drawer that holds a standard gift or credit card (85.5 x 54 mm), with an engraved front and a knob that rides in a slot. Box size 102 x 65 x 20 mm, cut from 3 mm plywood, MDF or acrylic. Pick one of 6 occasion designs, Birthday, Christmas Day, Father's Day, Mother's Day, Wedding Day or Wedding Day 2, or your own custom text and decorations from 35 fonts and the Christmas, Halloween, Wedding, Flora and Fauna, Stars and Moon and New Year Party elements. You supply the message, name, occasion and material, the gift card itself is not included. Photos are Atomm's samples of the finished boxes. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Gift card holder boxes</h3>
     <p class="work-note">Sliding-lid drawer box, engraved front, knob in slot. One SVG export, every part laid out flat, ready to cut.</p>
     <div class="work-grid">
@@ -771,7 +771,7 @@ NAILS_HTML = """
   <div class="wrap">
     <div class="eyebrow">Christmas Nails</div>
     <h2 class="sec">Festive nails, made to order</h2>
-    <p class="sub">UV-printed press-on nails with Christmas designs, made to order in your size, reusable. Pick a set of 10 in mixed Christmas designs, add the application kit with glue, file, buffer, adhesive tabs and wipes, go bigger with a set of 20, or send us your own design or photo for a custom set of 10. The photo is a sample design from the eufyMake community (Katniss_e); real JakinsCraft sets coming soon as we make them. Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
+    <p class="sub">UV-printed press-on nails with Christmas designs, made to order in your size, reusable. Pick a set of 10 in mixed Christmas designs, add the application kit with glue, file, buffer, adhesive tabs and wipes, go bigger with a set of 20, or send us your own design or photo for a custom set of 10. The photo is a sample design from the eufyMake community (Katniss_e). Prices are starting prices in Canadian dollars, the final quote depends on size and design.</p>
     <h3 class="work-group">Christmas press-on nails</h3>
     <p class="work-note">Made to order in your size. Reusable press-on nails.</p>
     <div class="work-grid">
@@ -785,7 +785,7 @@ out = (HTML
        .replace("%%LOGO_PATH%%", LOGO_PATH)
        .replace("%%IMG_E1%%", IMG_E1)
        .replace("%%IMG_P1S%%", IMG_P1S)
-       .replace("%%IMG_F2%%", IMG_F2)
+       .replace("%%IMG_LASER%%", IMG_LASER)
        .replace("%%IMG_PENDANT%%", IMG_PENDANT)
        .replace("%%IMG_KEYCHAIN%%", IMG_KEYCHAIN)
        .replace("%%IMG_PLATE_CARD%%", IMG_PLATE_CARD)
