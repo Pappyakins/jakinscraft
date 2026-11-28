@@ -24,15 +24,15 @@ IMG_TEE_MOMLIFE = "assets/gallery/tee-mom-life.jpg"  # Mom Life t-shirt
 IMG_TEE_MONKEY = "assets/gallery/tee-monkey-dj.jpg"  # DJ monkey t-shirt
 IMG_KEY_BOTB = "assets/gallery/keychain-botb-arena.jpg"  # BOTB Arena keychain
 IMG_KEY_INSTA = "assets/gallery/keychains-instagram.jpg"  # Instagram QR keychains
-IMG_PENS_TREM = "assets/gallery/pens-trem-engraved.jpg"  # Laser-engraved TREM bamboo pens
+IMG_PENS_TREM = "assets/gallery/pens-trem-engraved.jpg"  # Laser-engraved bamboo pens
 IMG_TUMBLER_SUMMER = "assets/gallery/tumbler-summer-vibes.jpg"  # Summer Vibes tumbler
 IMG_E1_PRINTING = "assets/gallery/e1-printing-tumbler.jpg"  # Tumbler UV printing on the E1
 IMG_GAL_PENDANT = "assets/fb/nfc-pendant.jpg"  # NFC pendant listing photo -> gallery tile
 IMG_CANVAS_HAT = "assets/gallery/canvas-portrait-hat.jpg"  # New: framed canvas portrait, man in wide-brim hat -> gallery tile
 IMG_CANVAS_GLASSES = "assets/gallery/canvas-portrait-glasses.jpg"  # New: unframed canvas portrait, man with glasses -> gallery tile
-IMG_TREM_PAIR = "assets/gallery/canvas-portrait-trem-pair.jpg"  # New: framed TREM Children Church painted portraits, pair on display -> gallery tile
-IMG_TREM_SUIT = "assets/gallery/canvas-portrait-trem-suit.jpg"  # New: framed TREM Children Church painted portrait, suit and striped tie -> gallery tile
-IMG_TREM_FLORAL = "assets/gallery/canvas-portrait-trem-floral.jpg"  # New: framed TREM Children Church painted portrait, floral top -> gallery tile
+IMG_TREM_PAIR = "assets/gallery/canvas-portrait-trem-pair.jpg"  # New: framed painted portraits, pair on display -> gallery tile
+IMG_TREM_SUIT = "assets/gallery/canvas-portrait-trem-suit.jpg"  # New: framed painted portrait, suit and striped tie -> gallery tile
+IMG_TREM_FLORAL = "assets/gallery/canvas-portrait-trem-floral.jpg"  # New: framed painted portrait, floral top -> gallery tile
 
 import pathlib, urllib.parse
 
@@ -328,9 +328,9 @@ footer .powered b{color:var(--accent)}
     <p class="sub">Real work, fresh from the printer.</p>
     <div class="accent-rule" style="margin:0 0 28px"></div>
     <div class="gal">
-      <div class="tile tile-photo"><img src="%%IMG_TREM_PAIR%%" alt="Framed painted portrait prints — pair on display, TREM Children Church" loading="lazy"></div>
-      <div class="tile tile-photo"><img src="%%IMG_TREM_SUIT%%" alt="Framed painted portrait print — suit and striped tie, TREM Children Church" loading="lazy"></div>
-      <div class="tile tile-photo"><img src="%%IMG_TREM_FLORAL%%" alt="Framed painted portrait print — floral top, TREM Children Church" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TREM_PAIR%%" alt="Framed painted portrait prints — pair on display" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TREM_SUIT%%" alt="Framed painted portrait print — suit and striped tie" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_TREM_FLORAL%%" alt="Framed painted portrait print — floral top" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_CANVAS_HAT%%" alt="Custom canvas portrait print — man in a wide-brim hat and glasses, framed" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_CANVAS_GLASSES%%" alt="Custom canvas portrait print — man with glasses and beard on canvas" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_GAL_PENDANT%%" alt="Custom NFC & QR code business logo pendant" loading="lazy"></div>
@@ -347,7 +347,7 @@ footer .powered b{color:var(--accent)}
       <div class="tile tile-photo"><img src="%%IMG_TEE_MONKEY%%" alt="Custom printed t-shirt — DJ monkey" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_KEY_BOTB%%" alt="Custom printed keychain — BOTB Arena" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_KEY_INSTA%%" alt="Custom Instagram QR keychains" loading="lazy"></div>
-      <div class="tile tile-photo"><img src="%%IMG_PENS_TREM%%" alt="Laser-engraved bamboo pens — TREM" loading="lazy"></div>
+      <div class="tile tile-photo"><img src="%%IMG_PENS_TREM%%" alt="Laser-engraved bamboo pens" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_TUMBLER_SUMMER%%" alt="Custom UV-printed tumbler — Summer Vibes" loading="lazy"></div>
       <div class="tile tile-photo"><img src="%%IMG_E1_PRINTING%%" alt="Tumbler being UV printed on the eufyMake E1" loading="lazy"></div>
     </div>
